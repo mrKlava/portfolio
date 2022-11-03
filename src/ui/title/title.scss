@@ -1,0 +1,81 @@
+@use '/src/assets/styles/variables' as *;
+
+/* USING POSITION - ABSOLUTE */
+
+.title {
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+
+    font-weight: 400;
+    font-family: $font-title;
+
+    &-container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+
+        &.--card {
+            justify-content: flex-start;
+        }
+    }
+
+    &-inner {
+        position: relative;
+        
+        & h2 {
+            font-size: $title-xl;
+        }
+        & h4 {
+            font-size: $title-lg;
+        }
+    }
+
+    &.--white {
+        position: relative;
+        color: $clr-title-white;
+
+        filter: drop-shadow(-10px -10px 14px rgba(0, 0, 0, 0.25));
+    }
+    &.--blue {
+        background: $blue-gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        left: -70px;
+        top: -20px;
+
+        &.--card {
+            left: -10px;
+            top: 15px;
+        }
+    }
+    &.--pink {
+        background: $pink-gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        left: -140px;
+        top: -40px;
+
+        &.--card {
+            left: 5px;
+            top: -12px;
+        }
+    }
+}
+
+
+/* USING TEXT-SHADOW but without gradient */
+
+// .title {
+//     font-size: $text-xl;
+//     font-family: $font-title;
+
+//     text-shadow: -10px -5px 10px rgba(0, 0, 0, 0.38), -70px -25px 0px rgba(4, 106, 183, 0.7), -140px -50px 0px #AA04B1;
+
+//     &-container {
+//         display: flex;
+//         justify-content: end;
+//     }
+// }

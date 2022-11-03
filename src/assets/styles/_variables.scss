@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Kulim+Park:wght@300;400;700&family=Ubuntu+Mono&display=swap');
+
+
+//////////////////////////////////////
+//              COLORS              //
+//////////////////////////////////////
+
+$noir:                  #000;
+$blanche:               #fff;
+
+$grey:                  #8B8B8B;
+
+$xiketic:               #0c0c16;
+$pink-base:             #DB00FF;
+$blue-base:             #0094FF;
+
+$pink-gradient:         linear-gradient(180deg, #FA00FF 0%, rgba(250, 0, 255, 0) 100%);
+$blue-gradient:         linear-gradient(180deg, #0094FF 0%, rgba(0, 148, 255, 0) 100%);
+$pink-blue-gradient:    linear-gradient(119.99deg, #FF00D6 22.45%, rgba(0, 194, 255, 0.463542) 76.25%, rgba(0, 209, 255, 0) 98.4%);
+
+     // BG
+$bg-body:               $xiketic;
+$bg-navbar:             $xiketic;
+$bg-card:               $pink-blue-gradient;
+$bg-btn-prm:            $blue-base;
+$bg-btn-prm-hover:      darken($blue-base, 20%);
+$bg-btn-sec:            transparent;
+$bg-btn-sec-hover:      $blue-base;
+
+    // FONTS
+$clr-title-white:       $blanche;
+$clr-title-blue:        $blue-base;
+$clr-title-pink:        $pink-base;
+$clr-supbtitle:         $blanche;
+$clr-text:              $blanche;
+$clr-text-dark:         $grey;
+
+        // Nav-link
+$clr-navlink:           $blanche;
+        // Btn
+$clr-btn-prm:           $blanche;
+$color-btn-sec:         $blue-base;
+$color-btn-sec-hover:   $blanche;
+$color-btn-thr:         $blue-base;
+$color-btn-thr-hover:   darken($blue-base, 20%);
+
+    // OTHER
+
+
+//////////////////////////////////////
+//              TEXT                //
+//////////////////////////////////////
+
+/*
+font-family: 'Koulen', cursive;
+font-family: 'Kulim Park', sans-serif;
+font-family: 'Ubuntu Mono', monospace;
+*/
+
+$font-title:            'Koulen', cursive;
+$font-subtitle:         'Kulim Park', sans-serif;
+$font-text-bash:        'Ubuntu Mono', monospace;
+$font-text:             'Kulim Park', sans-serif;
+$font-link:             'Koulen', cursive;
+
+    // SIZE
+    
+$font-size-base:        16px;    // 1rem
+// Titles
+$title-xl:               8rem;    // 128px 
+$title-lg:               4rem;    // 64px
+$title-md:               2rem;    // 32px
+$title-sm:               1.5rem;  // 24px
+$title-xs:               1.25rem; // 20px
+// Text
+$text-xl:               1.125rem;// 18px 
+$text-lg:               1rem;    // 16px
+$text-md:               .9375rem;// 15px
+$text-sm:               .875rem; // 14px
+$text-xs:               .75rem;  // 12px
+
+//////////////////////////////////////
+//           SCREEN SIZE            //
+//////////////////////////////////////
+
+        // Small small screen / phone small
+$screen-xs:             320px;
+$screen-xs-min:         $screen-xs;             // 320px
+$screen-phone:          $screen-xs-min;         // 320px
+// $screen-xs-max:         $screen-sm-min - 1;   // 479px
+        // Small screen / phone
+$screen-sm:             480px;
+$screen-sm-min:         $screen-sm;             // 480px
+$screen-tablet:         $screen-sm-min;         // 480px
+// $screen-sm-max:         ($screen-md-min - 1);   // 767px
+        // Medium screen / tablet
+$screen-md:             768px;
+$screen-md-min:         $screen-md;             // 768px
+$screen-desktop:        $screen-md-min;         // 768px
+// $screen-md-max:         ($screen-lg-min - 1);   // 991px
+        // Medium screen / desktop small
+$screen-lg:             992px;
+$screen-lg-min:         $screen-lg;             // 992px
+$screen-desktop:        $screen-lg-min;         // 992px
+// Large screen / desktop
+$screen-xl:             1200px;
+$screen-xl-min:         $screen-xl;             // 1200px
+$screen-desktop:        $screen-xl-min;         // 1200px
+        // Large screen / desktop wide
+$screen-xxl:            1440px;
+$screen-xxl-min:        $screen-xxl;            // 1440px
+$screen-desktop-wide:   $screen-xxl-min;        // 1440px
+
+
+
+
