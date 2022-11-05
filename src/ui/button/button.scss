@@ -1,0 +1,53 @@
+@use '/src/assets/styles/variables' as *;
+
+.button {
+    cursor: pointer;
+
+    border: none;
+    border-radius: 4px;
+    padding: calc($text-lg / 2) calc($text-lg * 2);
+    background: none;
+    color: $clr-btn-prm;
+
+    font-size: $text-lg;
+    font-family: $font-btn;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    transition: background-color linear .2s,
+                color linear .2s,
+                border-color linear .2s;
+
+
+    &.--primary {
+        background-color: $bg-btn-prm;
+
+        &:hover {
+            background-color: $bg-btn-prm-hover;
+        }
+    }
+    &.--secondary {
+        color: $bg-btn-prm;
+        padding: calc($text-lg / 2 - 3px) calc($text-lg * 2 - 3px);
+        border: 3px solid $bg-btn-prm; 
+
+        &:hover {
+            background-color: $bg-btn-prm;
+            color: $clr-btn-prm;
+        }
+
+    }
+    &.--tertiary {
+        text-transform: lowercase;
+    
+        border-bottom: 2px solid $clr-btn-prm;
+        border-radius: 0;
+
+        padding: 0 0 .3rem;
+
+        &:hover {
+            color: $bg-btn-prm;
+            border-color: $bg-btn-prm;
+        }
+    }
+}
