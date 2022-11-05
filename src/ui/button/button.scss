@@ -14,11 +14,6 @@
     text-transform: uppercase;
     font-weight: 700;
 
-    transition: background-color linear .2s,
-                color linear .2s,
-                border-color linear .2s;
-
-
     &.--primary {
         background-color: $bg-btn-prm;
 

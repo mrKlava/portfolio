@@ -39,3 +39,12 @@ p {
 
   margin: 0 auto;
 }
+
+a,
+button,
+svg {
+  transition: color linear .2s,
+              background-color linear .2s,
+              border-color linear .2s,
+              fill linear .2s;
+}

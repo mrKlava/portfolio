@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card } from "./components"
+import { Card, SocialBar } from "./components"
 import { Button, Title } from "./ui"
 
 function App() {
@@ -18,6 +18,8 @@ function App() {
         <Card>
           {text}
         </Card>
+
+        <SocialBar />
       </div>
     </div>
   )

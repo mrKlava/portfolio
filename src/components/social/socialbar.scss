@@ -1,0 +1,33 @@
+@use '/src/assets/styles/variables' as *;
+
+.social {
+    &-list {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+
+        &_item {
+            margin-right: 1rem;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            a {
+                svg {
+                    fill: $blue-base;
+                    width: 2.5rem;
+                }
+
+                &:hover {
+                   svg {
+                        fill: lighten($blue-base, 20%)
+                   }
+                }
+            }
+        }
+    }
+}
