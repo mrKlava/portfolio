@@ -1,0 +1,58 @@
+@use '/src/assets/styles/variables' as *;
+
+.card {
+    &-container {
+        display: inline-block;
+        border-radius: 10px;
+        padding: 3px;
+        
+        background: $pink-blue-gradient;
+        filter: drop-shadow(-10px -16px 20px rgba(158, 0, 255, 0.25)) drop-shadow(0px 0px 25px rgba(0, 194, 255, 0.25));
+    }
+    
+    &-inner {
+        border-radius: 10px;
+        padding: 2rem;
+        background: $bg-body;
+    }
+
+    &-terminal {
+        font-family: $font-text-bash;
+
+        &_controls {
+            margin-bottom: 2rem;
+
+            .terminal-btn {
+                cursor: pointer;
+
+                width: 1rem;
+
+                transition: fill linear .2s;
+
+                &.--close {
+                    fill: $pink-base;
+                    margin-right: .7rem;
+
+                    &:hover {
+                        fill: lighten($pink-base, 20%);
+                    }
+                }
+                &.--minima {
+                    fill: $blue-base;
+
+                    &:hover {
+                        fill: lighten($blue-base, 20%);
+                    }
+                }
+            }
+        }
+            
+        &_subtitle {
+            color: $blue-base;
+        }
+
+        .terminal-line {
+            color: $pink-base;
+        }
+    }
+}
