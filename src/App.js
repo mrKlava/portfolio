@@ -1,18 +1,20 @@
 import React from 'react'
-import { Card, SocialBar, StackBar } from "./components"
+import { Card, SocialBar, StackBar, InfoBar } from "./components"
 import { SvgEmail, SvgGithub, SvgLinkedin, SvgPhone } from "./assets/svg"
 import { Button, Title } from "./ui"
 
 function App() {
   let text = "Praesent lorem ligula, ultrices nec enim rutrum, dictum porttitor lorem. Sed a nunc faucibus, pharetra neque vel, congue ipsum. Quisque mollis ex nisl, in efficitur quam lacinia ac. Phasellus dapibus hendrerit est non viverra. Sed tincidunt pulvinar odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut nec viverra justo. Duis a efficitur nulla. Nam venenatis egestas tortor, ut tempus risus dapibus eu. Nunc non aliquam massa."
 
-  const objSocial = [
+  const arrSocial = [
     { svg: <SvgGithub />, link: 'https://github.com/mrKlava' },
     { svg: <SvgLinkedin />, link: 'https://www.linkedin.com/in/artursklava/' },
     { svg: <SvgEmail />, link: 'placeholder@gmail.com' }, 
     { svg: <SvgPhone />, link: '+33132423242' }
   ]
 
+  const arrInfo = ['2022-2024', 'Diploma +2', 'Web development']
+  
   const arrStack = ['HTML', 'CSS', 'Sass', 'React']
 
   return (
@@ -29,8 +31,9 @@ function App() {
           {text}
         </Card>
 
-        <SocialBar list={objSocial} />
+        <SocialBar list={arrSocial} />
         <StackBar list={arrStack} />
+        <InfoBar list={arrInfo} />
       </div>
     </div>
   )
