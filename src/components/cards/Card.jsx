@@ -2,9 +2,9 @@ import React from "react"
 import { SvgTerminalClose, SvgTerminalMinimize } from "../../assets/svg";
 import "./card.scss"
 
-function Card({ children, terTitle, terSubtitle, terTitleSec, terText }) {
+function Card({ children, className, terTitle, terSubtitle, terTitleSec, terText }) {
   return (
-    <div className="card">
+    <div className={`card ${className}`}>
       <div className="card-container">
         <div className="card-inner">
           {(terTitle || terSubtitle || terTitleSec || terText) ? <CardTerminal obj={{terTitle, terSubtitle, terTitleSec, terText}} /> : null}

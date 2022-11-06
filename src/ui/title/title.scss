@@ -1,7 +1,5 @@
 @use '/src/assets/styles/variables' as *;
 
-/* USING POSITION - ABSOLUTE */
-
 .title {
     position: absolute;
     display: inline-block;
@@ -27,7 +25,7 @@
             font-size: $title-xl;
         }
         & h4 {
-            font-size: $title-lg;
+            font-size: $title-sm;
         }
     }
 
@@ -46,8 +44,8 @@
         top: -20px;
 
         &.--card {
-            left: -10px;
-            top: 15px;
+            left: -5px;
+            top: 8px;
         }
     }
     &.--pink {
@@ -60,22 +58,7 @@
 
         &.--card {
             left: 5px;
-            top: -12px;
+            top: -8px;
         }
     }
 }
-
-
-/* USING TEXT-SHADOW but without gradient */
-
-// .title {
-//     font-size: $text-xl;
-//     font-family: $font-title;
-
-//     text-shadow: -10px -5px 10px rgba(0, 0, 0, 0.38), -70px -25px 0px rgba(4, 106, 183, 0.7), -140px -50px 0px #AA04B1;
-
-//     &-container {
-//         display: flex;
-//         justify-content: end;
-//     }
-// }

@@ -2,10 +2,10 @@ import React from 'react'
 import { SvgCertificate, SvgClock, SvgTag } from '../../assets/svg'
 import './infobar.scss'
 
-function InfoBar({list}) {
+function InfoBar({className, list}) {
     const svgArr = [<SvgClock />, <SvgCertificate />, <SvgTag />]
   return (
-    <div className="info">
+    <div className={`${className} info`}>
     <div className="info-container">
       <ul className="info-list">
           { list.map( (item, index) => {
