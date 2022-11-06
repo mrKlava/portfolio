@@ -65,9 +65,11 @@ function JourneySection() {
         <div className="section-container">
           <Title text={data.title} />
           <div className="journey-content">
-            { data.cards.map( (item, index) => {
-                return <JourneyCard className='journey-content_item' key={index} item={item} number={index} />
-            }) }
+            { 
+                data.cards.map( (item, index) => {
+                    return <JourneyCard className='journey-content_item' key={index} item={item} number={index} />
+                }) 
+            }
 
           </div>
         </div>

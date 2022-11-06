@@ -18,6 +18,7 @@ function Card({ children, className, terTitle, terSubtitle, terTitleSec, terText
 export default Card;
 
 function CardTerminal({obj}) {
+  // console.log
 
   return (
     <div className="card-terminal">
@@ -31,9 +32,12 @@ function CardTerminal({obj}) {
       <div className="card-terminal_subtitle">
         {obj.terSubtitle} <br /> ...
       </div>
-      <div className="card-terminal_title">
-        <span className="terminal-line">root@user-kali:</span> ~$ {obj.terTitleSec}
-      </div>
+      {
+        obj.terTitleSec &&  
+        <div className="card-terminal_title">
+          <span className="terminal-line">root@user-kali:</span> ~$ {obj.terTitleSec}
+        </div>
+      }
       <div className="card-terminal_text">{obj.terText}</div>
       <div className="card-terminal_end">
         <span className="terminal-line">root@user-kali:</span> ~$ |

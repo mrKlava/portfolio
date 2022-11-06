@@ -1,0 +1,22 @@
+@use '/src/assets/styles/variables' as *;
+
+.designs {
+    padding: 4.5em 0;
+
+    &-header {
+        display: flex;
+        flex-wrap: wrap-reverse;
+
+        &_item {
+            width: 50%;
+
+            @media (max-width: $screen-xl) {
+                width: 100%;
+
+                .card-container {
+                    display: block;
+                }
+            }
+        }
+    }
+}
