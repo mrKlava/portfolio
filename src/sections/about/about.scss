@@ -1,0 +1,27 @@
+@use '/src/assets/styles/variables' as *;
+
+.about {
+    padding: 4.5rem 0;
+
+    &-content {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        &_item {
+            width: 50%;
+
+            @media (max-width: $screen-md) {
+                width: 100%;
+            }
+        }
+    }
+
+    &-image {
+        img {
+            display: block;
+            max-width: 575px;
+            width: 100%;
+        }
+    }
+}

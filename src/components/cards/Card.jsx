@@ -2,12 +2,12 @@ import React from "react"
 import { SvgTerminalClose, SvgTerminalMinimize } from "../../assets/svg";
 import "./card.scss"
 
-function Card({ children, terTitle, terSubtitle, terText }) {
+function Card({ children, terTitle, terSubtitle, terTitleSec, terText }) {
   return (
     <div className="card">
       <div className="card-container">
         <div className="card-inner">
-          {(terTitle || terSubtitle || terText) ? <CardTerminal obj={{terTitle, terSubtitle, terText}} /> : null}
+          {(terTitle || terSubtitle || terTitleSec || terText) ? <CardTerminal obj={{terTitle, terSubtitle, terTitleSec, terText}} /> : null}
           {children}
         </div>
       </div>
@@ -30,6 +30,9 @@ function CardTerminal({obj}) {
       </div>
       <div className="card-terminal_subtitle">
         {obj.terSubtitle} <br /> ...
+      </div>
+      <div className="card-terminal_title">
+        <span className="terminal-line">root@user-kali:</span> ~$ {obj.terTitleSec}
       </div>
       <div className="card-terminal_text">{obj.terText}</div>
       <div className="card-terminal_end">
