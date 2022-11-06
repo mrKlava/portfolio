@@ -1,0 +1,41 @@
+@use '/src/assets/styles/variables' as *;
+
+.stack {
+    &-list {
+        list-style: none;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+
+        padding: 0;
+        margin: 0;
+
+        &_item {
+            cursor:default;
+
+            padding: .25rem .5rem;
+            background-color: $pink-base;
+            border-radius: 10px;
+
+            margin-right: 1rem;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            transition: filter linear .2s,
+                        background-color linear .2s;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &:hover {
+                background: $pink-blue-gradient;
+                filter: drop-shadow(-10px -16px 20px rgba(158, 0, 255, 0.25)) drop-shadow(0px 0px 25px rgba(0, 194, 255, 0.25));
+            }
+        }
+    }
+}
