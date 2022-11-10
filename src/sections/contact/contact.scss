@@ -1,0 +1,13 @@
+@use '/src/assets/styles/variables' as *;
+
+.contact {
+    &-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .card {
+            margin-bottom: 3rem;
+        }
+    }
+}

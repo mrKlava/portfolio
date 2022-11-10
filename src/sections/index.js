@@ -1,3 +1,5 @@
 export { default as AboutSection } from './about/AboutSection'
 export { default as JourneySection } from './journey/JourneySection'
 export { default as DesignsSection } from './designs/DesignsSection'
+export { default as WorksSection } from './works/WorksSection'
+export { default as ContactSection } from './contact/ContactSection'

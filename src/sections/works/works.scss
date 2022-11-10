@@ -1,0 +1,73 @@
+@use '/src/assets/styles/variables' as *;
+
+.works {
+    padding: 4.5em 0;
+
+    &-header {
+        display: flex;
+        flex-wrap: wrap-reverse;
+
+        @media (max-width: $screen-xl) {
+            margin-bottom: 3rem;
+        }
+
+        &_item {
+            width: 50%;
+
+            @media (max-width: $screen-xl) {
+                width: 100%;
+
+                .card-container {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &_item {
+            width: 30%;
+            margin-bottom: 3rem;
+
+            &:last-child {
+                margin-bottom: 0;
+
+                justify-self: center;
+            }
+
+            @media (max-width: $screen-xl) {
+                width: 45%;
+            }
+
+            @media (max-width: $screen-md) {
+                width: 100%;
+            }
+        }
+    }
+
+    &-card {
+        &_title {
+            margin-bottom: 1rem;
+        }
+
+        &_subtitle {
+            font-size: $title-xs;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+        }
+
+        &_description {
+            font-family: $font-text-bash;
+            color: $clr-text-dark;
+            margin-bottom: 1rem;
+        }
+
+        &_info {
+            margin-bottom: 2rem;
+        }
+    }
+}

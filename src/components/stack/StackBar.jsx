@@ -1,9 +1,9 @@
 import React from 'react'
 import './stackbar.scss'
 
-function StackBar({list}) {
+function StackBar({className, list}) {
   return (
-    <div className="stack">
+    <div className={className ? `${className} stack` : "stack"}>
     <div className="stack-container">
       <ul className="stack-list">
           { list.map( (item, index) => {

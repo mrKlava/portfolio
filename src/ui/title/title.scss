@@ -15,6 +15,14 @@
 
         &.--card {
             justify-content: flex-start;
+
+            &.--contact {
+                justify-content: center;
+
+                h4 {
+                    font-size: $title-lg;
+                }
+            }
         }
     }
 

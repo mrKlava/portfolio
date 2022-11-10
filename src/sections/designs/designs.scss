@@ -7,6 +7,10 @@
         display: flex;
         flex-wrap: wrap-reverse;
 
+        @media (max-width: $screen-xl) {
+            margin-bottom: 3rem;
+        }
+
         &_item {
             width: 50%;
 
