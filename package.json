@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "pages": "https://mrKlava.github.io/portfolio",
+  "homepage": "https://mrKlava.github.io/portfolio",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.6",
