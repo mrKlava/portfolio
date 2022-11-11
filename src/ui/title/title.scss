@@ -19,6 +19,8 @@
             &.--contact {
                 justify-content: center;
 
+                margin-bottom: 2rem;
+
                 h4 {
                     font-size: $title-lg;
                 }
@@ -30,10 +32,13 @@
         position: relative;
         
         & h2 {
+            line-height: 1;
             font-size: $title-xl;
         }
         & h4 {
+            line-height: 1;
             font-size: $title-sm;
+            text-align: center;
         }
     }
 

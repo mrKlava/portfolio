@@ -6,10 +6,8 @@
     &-header {
         display: flex;
         flex-wrap: wrap-reverse;
-
-        @media (max-width: $screen-xl) {
-            margin-bottom: 3rem;
-        }
+        
+        margin-bottom: 3rem;
 
         &_item {
             width: 50%;
@@ -27,7 +25,7 @@
     &-content {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-evenly;
 
         &_item {
             width: 30%;

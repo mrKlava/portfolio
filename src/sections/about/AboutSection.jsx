@@ -1,14 +1,16 @@
 import React from 'react'
+import { imgAbout } from '../../assets/images'
 import { Card } from '../../components'
 import { Title } from '../../ui'
 
 import './about.scss'
-import photo from '../../assets/images/about/about-img.png'
+
 
 function AboutSection() {
 
   const data = {
     title: 'about me',
+    image: imgAbout,
     card: {
       title: 'whoami',
       titleSec: 'sudo ./about -r',
@@ -25,7 +27,7 @@ function AboutSection() {
             <div className="about-content">
               <div className="about-content_item">
                 <div className="about-image">
-                  <img src={photo} alt="" />
+                  <img src={data.image} alt="" />
                 </div>
               </div>
               <div className="about-content_item">

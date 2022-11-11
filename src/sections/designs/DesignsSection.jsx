@@ -1,6 +1,7 @@
 import React from "react";
+import { imgFelicaPhoto, imgGoodBoy, imgJetbrains, imgMotivator, imgMrCoffee } from "../../assets/images";
 import { Card } from "../../components";
-import { Title } from "../../ui";
+import { Button, Title } from "../../ui";
 
 import "./designs.scss";
 
@@ -13,28 +14,28 @@ function DesignsSection() {
     },
     cards: [
       {
-        img: "",
-        title: "",
+        img: imgJetbrains,
+        title: "Jetbrains project",
         link: "#",
       },
       {
-        img: "",
-        title: "",
+        img: imgGoodBoy,
+        title: "Project Good-Boy",
         link: "#",
       },
       {
-        img: "",
-        title: "",
+        img: imgFelicaPhoto,
+        title: "Felica Photographe",
         link: "#",
       },
       {
-        img: "",
-        title: "",
+        img: imgMrCoffee,
+        title: "Mr Coffee",
         link: "#",
       },
       {
-        img: "",
-        title: "",
+        img: imgMotivator,
+        title: "Motivator",
         link: "#",
       },
     ],
@@ -75,5 +76,24 @@ function DesignsSection() {
 export default DesignsSection;
 
 function DesignsCard({ className, item }) {
-  return <Card className={className}></Card>;
+  return (
+    <div className={className}>
+      <div className="section-container">
+
+        <div className="image-container">
+          <div className="overlay"></div>
+          <img src={item.img} alt="" />
+        </div>
+
+        <div className="designs-card_info">
+          <Title text={item.title} type="card" />
+          <div className="designs-card_description">
+            description
+          </div>
+          <Button>See design</Button>
+        </div>
+
+      </div>
+    </div>
+  )
 }
