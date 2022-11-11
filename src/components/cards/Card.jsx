@@ -30,17 +30,15 @@ function Card({
 export default Card;
 
 function CardTerminal({ obj }) {
-
   const [isVisible, setIsVisible] = useState(false)
 
-  const blinking = () => setIsVisible(!isVisible)
-
   useEffect( () => {
+      const blinking = () => setIsVisible(!isVisible)
       const interval = setInterval( blinking, 600)
     return( () => {
       clearInterval(interval)
     })
-  }, [blinking])
+  }, [isVisible])
 
   return (
     <div className="card-terminal">
