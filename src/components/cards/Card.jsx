@@ -1,30 +1,52 @@
-import React from "react"
+import React from "react";
+import { useEffect, useState } from "react";
 import { SvgTerminalClose, SvgTerminalMinimize } from "../../assets/svg";
-import "./card.scss"
+import "./card.scss";
 
-function Card({ children, className, terTitle, terSubtitle, terTitleSec, terText }) {
+function Card({
+  children,
+  className,
+  terTitle,
+  terSubtitle,
+  terTitleSec,
+  terText,
+}) {
   return (
-    <div className={`card ${className}`}>
+    <div className={className ? `card ${className}` : "card"}>
       <div className="card-container">
         <div className="card-inner">
-          {(terTitle || terSubtitle || terTitleSec || terText) ? <CardTerminal obj={{terTitle, terSubtitle, terTitleSec, terText}} /> : null}
+          {terTitle || terSubtitle || terTitleSec || terText ? (
+            <CardTerminal
+              obj={{ terTitle, terSubtitle, terTitleSec, terText }}
+            />
+          ) : null}
           {children}
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default Card;
 
-function CardTerminal({obj}) {
-  // console.log
+function CardTerminal({ obj }) {
+
+  const [isVisible, setIsVisible] = useState(false)
+
+  const blinking = () => setIsVisible(!isVisible)
+
+  useEffect( () => {
+      const interval = setInterval( blinking, 600)
+    return( () => {
+      clearInterval(interval)
+    })
+  }, [blinking])
 
   return (
     <div className="card-terminal">
       <div className="card-terminal_controls">
-        <SvgTerminalClose className='terminal-btn --close' />
-        <SvgTerminalMinimize className='terminal-btn --minimize' />
+        <SvgTerminalClose className="terminal-btn --close" />
+        <SvgTerminalMinimize className="terminal-btn --minimize" />
       </div>
       <div className="card-terminal_title">
         <span className="terminal-line">root@user-kali:</span> ~$ {obj.terTitle}
@@ -32,16 +54,16 @@ function CardTerminal({obj}) {
       <div className="card-terminal_subtitle">
         {obj.terSubtitle} <br /> ...
       </div>
-      {
-        obj.terTitleSec &&  
+      {obj.terTitleSec && (
         <div className="card-terminal_title">
-          <span className="terminal-line">root@user-kali:</span> ~$ {obj.terTitleSec}
+          <span className="terminal-line">root@user-kali:</span> ~${" "}
+          {obj.terTitleSec}
         </div>
-      }
+      )}
       <div className="card-terminal_text">{obj.terText}</div>
       <div className="card-terminal_end">
-        <span className="terminal-line">root@user-kali:</span> ~$ |
+        <span className="terminal-line">root@user-kali:</span> ~$ <span className={isVisible ? 'visible' : 'visible-not'}>|</span>
       </div>
     </div>
-  )
+  );
 }

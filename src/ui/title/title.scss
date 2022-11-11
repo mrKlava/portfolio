@@ -34,15 +34,16 @@
 
     &-inner {
         position: relative;
-        
+
         & h2 {
             line-height: 1;
             font-size: $title-xl;
 
             @media (max-width: $screen-md) {
-                font-size: $title-lg;  
+                font-size: $title-lg;
             }
         }
+
         & h4 {
             line-height: 1;
             font-size: $title-sm;
@@ -56,6 +57,7 @@
 
         filter: drop-shadow(-10px -10px 14px rgba(0, 0, 0, 0.25));
     }
+
     &.--blue {
         background: $blue-gradient;
         -webkit-background-clip: text;
@@ -74,6 +76,7 @@
             top: 8px;
         }
     }
+
     &.--pink {
         background: $pink-gradient;
         -webkit-background-clip: text;

@@ -10,7 +10,7 @@
     right: 0;
 
     z-index: 10;
-    
+
     &-inner {
         // ??? do i need position relative
         position: relative;
@@ -26,8 +26,9 @@
         @media (max-width: $screen-md) {
             justify-content: flex-start
         }
-        
-        &__nav {                                                /* Desktop */
+
+        &__nav {
+            /* Desktop */
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -49,7 +50,9 @@
                 display: none;
             }
 
-            &-mob {                                             /* Tablet / Mobile */
+            &-mob {
+
+                /* Tablet / Mobile */
                 @media (max-width: $screen-md) {
                     display: block;
                 }
@@ -73,10 +76,10 @@
                         margin: 0;
                         padding: 1rem 0;
 
-                        border-bottom: solid 1px $blanche;      // BORDERs
+                        border-bottom: solid 1px $blanche; // BORDERs
 
                         &:last-child {
-                            border-bottom: none;                // BORDERs
+                            border-bottom: none; // BORDERs
 
                         }
 
@@ -107,27 +110,29 @@
             position: absolute;
             display: inline-block;
             width: 100%;
-        
+
             font-weight: 400;
             font-family: $font-title;
-        
+
             &-inner {
                 position: relative;
                 text-align: center;
                 line-height: 1;
-                
+
                 a,
                 h5 {
                     font-size: $title-sm;
                     text-decoration: none;
 
                 }
+
                 &:hover {
-                    .navlink.--blue {         
+                    .navlink.--blue {
                         left: -5px;
                         top: 8px;
                     }
-                    .navlink.--pink {         
+
+                    .navlink.--pink {
                         left: 5px;
                         top: -8px;
                     }
@@ -137,26 +142,27 @@
             &.--white {
                 position: relative;
                 color: $clr-title-white;
-        
+
                 filter: drop-shadow(-10px -10px 14px rgba(0, 0, 0, 0.25));
             }
+
             &.--blue {
                 background: $blue-gradient;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
-        
+
                 // left: -5px;
                 // top: 8px;
             }
+
             &.--pink {
                 background: $pink-gradient;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
-        
+
                 // left: 5px;
                 // top: -8px;
             }
         }
     }
 }
-

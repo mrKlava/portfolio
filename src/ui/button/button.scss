@@ -3,6 +3,7 @@
 .button {
     cursor: pointer;
 
+    text-decoration: none;
     border: none;
     border-radius: 4px;
     padding: calc($text-lg / 2) calc($text-lg * 2);
@@ -21,10 +22,11 @@
             background-color: $bg-btn-prm-hover;
         }
     }
+
     &.--secondary {
         color: $bg-btn-prm;
         padding: calc($text-lg / 2 - 3px) calc($text-lg * 2 - 3px);
-        border: 3px solid $bg-btn-prm; 
+        border: 3px solid $bg-btn-prm;
 
         &:hover {
             background-color: $bg-btn-prm;
@@ -32,11 +34,12 @@
         }
 
     }
+
     &.--tertiary {
         text-transform: lowercase;
         font-weight: 300;
 
-    
+
         border-bottom: 1px solid $clr-btn-prm;
         border-radius: 0;
 

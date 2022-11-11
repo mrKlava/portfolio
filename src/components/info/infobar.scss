@@ -13,7 +13,7 @@
         margin: 0;
 
         &_item {
-            cursor:default;
+            cursor: default;
 
             margin-right: 1.5rem;
 
@@ -21,7 +21,7 @@
             align-items: center;
 
             transition: filter linear .2s,
-                        background-color linear .2s;
+                background-color linear .2s;
 
             span {
                 margin-left: .5rem;
@@ -38,9 +38,7 @@
                 margin-right: 0;
             }
 
-            &:hover {
-
-            }
+            &:hover {}
         }
     }
 }

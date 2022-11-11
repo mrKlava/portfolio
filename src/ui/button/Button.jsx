@@ -1,12 +1,18 @@
-import React from 'react'
-import './button.scss'
+import React from "react";
+import "./button.scss";
 
-function Button({children, type='primary', onClick}) {
+function Button({ children, type = "primary", onClick, link = false }) {
   return (
-    <button onClick={onClick} className={`button --${type}`}>
+    <a
+      href={link ? link : null}
+      target={link ? "_blank" : null}
+      rel="noreferrer"
+      onClick={onClick}
+      className={type ? `button --${type}` : "button"}
+    >
       {children}
-    </button>
-  )
+    </a>
+  );
 }
 
-export default Button
+export default Button;

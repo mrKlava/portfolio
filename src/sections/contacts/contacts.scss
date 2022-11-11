@@ -1,12 +1,15 @@
 @use '/src/assets/styles/variables' as *;
 
-.contact {
+.contacts {
     &-container {
         display: flex;
         flex-direction: column;
         align-items: center;
-
+    }
         .card {
+            display: flex;
+            justify-content: center;
+            .card-container {
             margin-bottom: 3rem;
         }
     }

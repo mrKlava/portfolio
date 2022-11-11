@@ -1,27 +1,25 @@
-import React from 'react';
+import React from "react";
 
-import './hamburger.scss';
-
+import "./hamburger.scss";
 
 function Hamburger(props) {
-    
-    const isBurger = props.isBurger
+  const isBurger = props.isBurger;
 
-    function handleClick() {
-        props.updateHam(!isBurger)
-    }
+  function handleClick() {
+    props.updateHam(!isBurger);
+  }
 
-    return (
-        <div
-            className={ !isBurger ? 'hamburger' : 'hamburger active' }
-            onClick={handleClick}
-        >
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    );
+  return (
+    <div
+      className={!isBurger ? "hamburger" : "hamburger active"}
+      onClick={handleClick}
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  );
 }
 
 export default Hamburger;

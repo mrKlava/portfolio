@@ -1,8 +1,7 @@
-import { imgAbout, imgFelicaPhoto, imgGoodBoy, imgJetbrains, imgMotivator, imgMrCoffee } from "../images";
+import { imgAbout, imgFelicaPhoto, imgGoodBoy, imgJetbrains, imgMotivator, imgMrCoffee, imgPortfolio } from "../images";
+import { SvgEmail, SvgGithub, SvgLinkedin, SvgPhone } from "../svg";
 
-
-
-export default data = {
+export const data = {
     "navbar": {
         "links": [
             { "text": "About", "link": "#about" },
@@ -70,7 +69,7 @@ export default data = {
                 "title": "first steps ...",
                 "subtitle": "Udemy, Youtube, Modern Javascript - Self learning",
                 "description":
-                    "Started my journey with an outdated course on Udemy and continued my learning with free materials found on the internet - YouTube, different articles and \”Modern Javascript\” book…",
+                    "Started my journey with an outdated course on Udemy and continued my learning with free materials found on the internet - YouTube, different articles and \"Modern Javascript\" book…",
                 "infobar": ["2020", "N/A", "Basics of Frontend Web development"],
                 "link": "https://www.google.com/",
             },
@@ -94,7 +93,7 @@ export default data = {
                 "img": imgGoodBoy,
                 "title": "Project Good-Boy",
                 "description":
-                    "This is one of many designs created during studying in  \”La fabrique du numérique\” as one of the projects.",
+                    "This is one of many designs created during studying in  \"La fabrique du numérique\" as one of the projects.",
                 "link": "https://www.figma.com/file/T2t3qdCNVyE1YauWNSuCUl/Project-%22GOOD-BOY%22?node-id=2%3A2",
             },
             {
@@ -108,7 +107,7 @@ export default data = {
                 "img": imgMrCoffee,
                 "title": "Mr Coffee",
                 "description":
-                    "This is one of many designs created during studying in  \”La fabrique du numérique\” as one of the projects.",
+                    "This is one of many designs created during studying in  \"La fabrique du numérique\" as one of the projects.",
                 "link": "https://www.figma.com/file/ZxgKthPoY6TpFJsEPiuVSV/mr-coffee?node-id=1%3A3",
             },
             {
@@ -116,86 +115,101 @@ export default data = {
                 "title": "Motivator",
                 "description":
                     "Motivator design was made for one of my pet projects.",
-                "link": "#",
+                "link": "https://www.figma.com/file/Ol6bnmsdOYFJZDSKRH5kp7/Motivator?node-id=0%3A1",
+            },
+            {
+                "img": imgPortfolio,
+                "title": "My Portfolio",
+                "description":
+                    "Yes. This site is also designed by me...",
+                "link": "https://www.figma.com/file/sly82M2UeQgLaz3c6e07vj/Portfolio?node-id=1%3A2",
             },
         ],
     },
     "works": {
         "title": "my works",
         "card": {
-          "title": "sudo ./projects -r",
-          "subtitle": "Here are some my projects made using different stacks",
+            "title": "sudo ./projects -r",
+            "subtitle": "Here are some my projects made using different stacks",
         },
         "cards": [
-          {
-            "title": "Mongo",
-            "subtitle": "Web page",
-            "description": 
-                "This web page was created for practice purposes with help of YouTube channel BrainsCloud. This project is a fully responsive website using Media Query Breakpoints in CSS and as well using jQuery to add interactivity for mobile navigation, accordion description dropout. For reviews sections used Slick carousel...",
-            "info": ["HTML", "SCC", "JavaScript", "jQuery"],
-            "link": "https://github.com/mrKlava/MoGo"
-          },
-          {
-            "title": "Outdoor",
-            "subtitle": "Web page",
-            "description": 
-                "This is a replica of one of the WordPress themes created as one of the projects during studying in  \”La fabrique du numérique\” . This project is a fully responsive multi page website using Media Query Breakpoints in SCSS and as well using JavaScript to add interactivity for mobile navigation and configuration of Swiper slider.",
-            "info": ["HTML", "Sass", "JavaScript"],
-            "link": "#"
-          },
-          {
-            "title": "Felica Photographe",
-            "subtitle": "Single Page Application",
-            "description": 
-                "This site was created for a photographer initially on pure HTML and LESS and afterwards remastered as a multi language Single Page Application on React using Sass. This site was created to promote services.",
-            "info": ["HTML", "Sass", "JavaScript", "React", "i18n"],
-            "link": "https://github.com/mrKlava/felica-zoom-photo"
-          },
-          {
-            "title": "ActiveBox",
-            "subtitle": "Web page",
-            "description": 
-                "This web page was created for practice purposes with help of YouTube channel BrainsCloud. This project is a fully responsive website using Media Query Breakpoints in CSS and as well using jQuery to add interactivity for mobile navigation, accordion description dropout. For reviews sections used Slick carousel.",
-            "info": ["HTML", "SCC", "JavaScript", "jQuery"],
-            "link": "https://github.com/mrKlava/activeBox"
-          },
-          {
-            "title": "Jetbrains Project",
-            "subtitle": "Single Page Application",
-            "description": 
-                "This is the project \"Portfolio\" which includes five other projects from this course. During this course all projects were made on pure HTML, CSS and JS, but here they are remastered on React.js. ",
-            "info": ["HTML", "SCC", "JavaScript", "React"],
-            "link": "https://github.com/mrKlava/jetbrains-course"
-          },
-          {
-            "title": "Motivator",
-            "subtitle": "Single Page Application",
-            "description": 
-                "Pet project on React. Multi page motivation platform with motivating stories. Still under construction due to complexity. Using Redux-toolkit to manage states, MongoDB Realm for authentication and storing data. Will be multi language with help of i18n.",
-            "info": ["HTML", "Sass", "JavaScript", "React", "i18n", "Redux", "React Router", "MongoDB"],
-            "link": "https://github.com/mrKlava/motivator_react"
-          },
-          {
-            "title": "Hangman",
-            "subtitle": "Web game",
-            "description": 
-                "Hangman is my early project implementing a classic game - Hangman. It was creating using three basic languages of Internet: HTML, CSS and Javascript",
-            "info": ["HTML", "SCC", "JavaScript"],
-            "link": "https://github.com/mrKlava/Hangman"
-          },
+            {
+                "title": "My Portfolio",
+                "subtitle": "Single Page Application",
+                "description":
+                    "This portfolio is created on React. This SPA is still under construction. Soon coming: State handling is managed by Redux-toolkit. Multi language thanks to i18n.",
+                "info": ["HTML", "SCSS", "React", "Redux-toolkit", "i18n"],
+                "link": "https://github.com/mrKlava/MoGo"
+            },
+            {
+                "title": "Mongo",
+                "subtitle": "Web page",
+                "description":
+                    "This web page was created for practice purposes with help of YouTube channel BrainsCloud. This project is a fully responsive website using Media Query Breakpoints in CSS and as well using jQuery to add interactivity for mobile navigation, accordion description dropout. For reviews sections used Slick carousel...",
+                "info": ["HTML", "SCC", "JavaScript", "jQuery"],
+                "link": "https://github.com/mrKlava/MoGo"
+            },
+            {
+                "title": "Outdoor",
+                "subtitle": "Web page",
+                "description":
+                    "This is a replica of one of the WordPress themes created as one of the projects during studying in  \"La fabrique du numérique\" . This project is a fully responsive multi page website using Media Query Breakpoints in SCSS and as well using JavaScript to add interactivity for mobile navigation and configuration of Swiper slider.",
+                "info": ["HTML", "Sass", "JavaScript"],
+                "link": "#"
+            },
+            {
+                "title": "Felica Photographe",
+                "subtitle": "Single Page Application",
+                "description":
+                    "This site was created for a photographer initially on pure HTML and LESS and afterwards remastered as a multi language Single Page Application on React using Sass. This site was created to promote services.",
+                "info": ["HTML", "Sass", "JavaScript", "React", "i18n"],
+                "link": "https://github.com/mrKlava/felica-zoom-photo"
+            },
+            {
+                "title": "ActiveBox",
+                "subtitle": "Web page",
+                "description":
+                    "This web page was created for practice purposes with help of YouTube channel BrainsCloud. This project is a fully responsive website using Media Query Breakpoints in CSS and as well using jQuery to add interactivity for mobile navigation, accordion description dropout. For reviews sections used Slick carousel.",
+                "info": ["HTML", "SCC", "JavaScript", "jQuery"],
+                "link": "https://github.com/mrKlava/activeBox"
+            },
+            {
+                "title": "Jetbrains Project",
+                "subtitle": "Single Page Application",
+                "description":
+                    "This is the project \"Portfolio\" which includes five other projects from this course. During this course all projects were made on pure HTML, CSS and JS, but here they are remastered on React.js. ",
+                "info": ["HTML", "SCC", "JavaScript", "React"],
+                "link": "https://github.com/mrKlava/jetbrains-course"
+            },
+            {
+                "title": "Motivator",
+                "subtitle": "Single Page Application",
+                "description":
+                    "Pet project on React. Multi page motivation platform with motivating stories. Still under construction due to complexity. Using Redux-toolkit to manage states, MongoDB Realm for authentication and storing data. Will be multi language with help of i18n.",
+                "info": ["HTML", "Sass", "JavaScript", "React", "i18n", "Redux", "React Router", "MongoDB"],
+                "link": "https://github.com/mrKlava/motivator_react"
+            },
+            {
+                "title": "Hangman",
+                "subtitle": "Web game",
+                "description":
+                    "Hangman is my early project implementing a classic game - Hangman. It was creating using three basic languages of Internet: HTML, CSS and Javascript",
+                "info": ["HTML", "SCC", "JavaScript"],
+                "link": "https://github.com/mrKlava/Hangman"
+            },
         ],
     },
     "contacts": {
         "title": "Want to contact me?",
         "card": {
-          "title": "sudo ./contact -w",
-          "subtitle": "Feel free to contact me if you have any questions or proposals",
+            "title": "sudo ./contact -w",
+            "subtitle": "Feel free to contact me if you have any questions or proposals",
         },
         "info": [
-          {svg: <SvgLinkedin />, type: "link", link: "#"},
-          {svg: <SvgGithub />, type: "link", link: "#"},
-          {svg: <SvgEmail />, type: "email", link: "#"},
-          {svg: <SvgPhone />, type: "number", link: "#"},
+            { svg: <SvgLinkedin />, type: "link", link: "https://www.linkedin.com/in/artursklava/" },
+            { svg: <SvgGithub />, type: "link", link: "https://github.com/mrKlava" },
+            { svg: <SvgEmail />, type: "email", link: "mailto:mr.a.klava@gmail.com?subject=Portfolio Page" },
+            { svg: <SvgPhone />, type: "number", link: "tel:WillBeUpdated" },
         ]
     }
 }

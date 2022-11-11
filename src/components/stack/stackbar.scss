@@ -13,7 +13,7 @@
         margin: 0;
 
         &_item {
-            cursor:default;
+            cursor: default;
 
             padding: .25rem .5rem;
             background-color: $pink-base;
@@ -27,7 +27,7 @@
             justify-content: center;
 
             transition: filter linear .2s,
-                        background-color linear .2s;
+                background-color linear .2s;
 
             &:last-child {
                 margin-right: 0;

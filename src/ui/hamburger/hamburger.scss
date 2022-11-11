@@ -1,5 +1,5 @@
 @use '/src/assets/styles/variables' as *;
-  
+
 .hamburger {
     @media (max-width: $screen-md) {
         display: block;
@@ -41,17 +41,21 @@
 
             top: 0;
         }
-        &:nth-child(2){
+
+        &:nth-child(2) {
             background: $pink-base;
         }
-        &:nth-child(3){
+
+        &:nth-child(3) {
             background: $blue-base;
         }
+
         &:nth-child(2),
         &:nth-child(3) {
             top: 50%;
-            transform: translateY(-50%);      // 18px
+            transform: translateY(-50%); // 18px
         }
+
         &:nth-child(4) {
             // top: 1.4rem;      // 36px
             bottom: 0;
@@ -61,24 +65,27 @@
     &.active {
         span {
             &:nth-child(1) {
-                top: .7rem;      // 18px
+                top: .7rem; // 18px
                 width: 0%;
                 left: 50%;
             }
+
             &:nth-child(2) {
                 -webkit-transform: rotate(45deg);
                 -moz-transform: rotate(45deg);
                 -o-transform: rotate(45deg);
                 transform: rotate(45deg);
             }
+
             &:nth-child(3) {
                 -webkit-transform: rotate(-45deg);
                 -moz-transform: rotate(-45deg);
                 -o-transform: rotate(-45deg);
                 transform: rotate(-45deg);
             }
+
             &:nth-child(4) {
-                top: .7rem;      // 18px
+                top: .7rem; // 18px
                 width: 0%;
                 left: 50%;
             }
