@@ -65,7 +65,7 @@ function WorksSection() {
       }
       
   return (
-    <section className="works">
+    <section id="works" className="works">
       <div className="container">
         <div className="section-container">
           <div className="works-header">

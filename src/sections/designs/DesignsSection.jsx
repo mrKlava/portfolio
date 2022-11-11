@@ -42,7 +42,7 @@ function DesignsSection() {
   };
 
   return (
-    <section className="designs">
+    <section id='designs' className="designs">
       <div className="container">
         <div className="section-container">
           <div className="designs-header">

@@ -20,7 +20,7 @@ function AboutSection() {
   }
 
   return (
-    <section className='about'>
+    <section id='about' className='about'>
         <div className="container">
           <div className="section-container">
             <Title text={data.title}/>

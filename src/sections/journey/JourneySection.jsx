@@ -60,7 +60,7 @@ function JourneySection() {
   };
 
   return (
-    <section className="journey">
+    <section id='journey' className="journey">
       <div className="container">
         <div className="section-container">
           <Title text={data.title} />

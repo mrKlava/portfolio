@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, SocialBar, StackBar, InfoBar } from "./components"
+import { Navbar, Card, SocialBar, StackBar, InfoBar } from "./components"
 import { SvgEmail, SvgGithub, SvgLinkedin, SvgPhone } from "./assets/svg"
 import { Button, Title } from "./ui"
 import { AboutSection, ContactSection, DesignsSection, JourneySection, WorksSection } from './sections'
@@ -20,6 +20,7 @@ function App() {
 
   return (
     <div className="App">
+      <Navbar />
       <AboutSection />
       <JourneySection />
       <DesignsSection />

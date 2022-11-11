@@ -21,7 +21,7 @@ function ContactSection() {
   }
 
   return (
-    <section className="contact">
+    <footer id='contacts' className="contact">
       <div className="container">
         <div className="section-container">
           <div className="contact-container">
@@ -31,7 +31,7 @@ function ContactSection() {
           </div>
         </div>
       </div>
-    </section>
+    </footer>
   )
 }
 

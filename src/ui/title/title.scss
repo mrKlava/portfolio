@@ -8,6 +8,8 @@
     font-weight: 400;
     font-family: $font-title;
 
+    margin-bottom: 2rem;
+
     &-container {
         width: 100%;
         display: flex;
@@ -15,6 +17,8 @@
 
         &.--card {
             justify-content: flex-start;
+
+            margin-bottom: 0;
 
             &.--contact {
                 justify-content: center;
@@ -34,6 +38,10 @@
         & h2 {
             line-height: 1;
             font-size: $title-xl;
+
+            @media (max-width: $screen-md) {
+                font-size: $title-lg;  
+            }
         }
         & h4 {
             line-height: 1;
@@ -56,6 +64,11 @@
         left: -70px;
         top: -20px;
 
+        @media (max-width: $screen-md) {
+            left: -35px;
+            top: -15px;
+        }
+
         &.--card {
             left: -5px;
             top: 8px;
@@ -68,6 +81,11 @@
 
         left: -140px;
         top: -40px;
+
+        @media (max-width: $screen-md) {
+            left: -70px;
+            top: -30px;
+        }
 
         &.--card {
             left: 5px;
