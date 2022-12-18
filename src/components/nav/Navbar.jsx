@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { handleBurger } from "../../store/reducers/ActionCreators";
 import { Hamburger } from "../../ui";
 
 import "./navbar.scss";
 
 function Navbar({ data }) {
-  const [toggleMobMenu, setToggleMobMenu] = useState(false);
+  const isBurger = useSelector(state => state.burgerReducer.isActive)
 
-  const handleHam = (hamState) => setToggleMobMenu(hamState);
-
-  // console.log (`This is Navbar: ${toggleMobMenu ? 'visible' : 'not-visible'}`)
+  const dispatch = useDispatch()
+  const handleClick = () => dispatch(handleBurger())
 
   return (
     <header className="navbar">
@@ -22,18 +23,18 @@ function Navbar({ data }) {
 
           <nav
             className={
-              toggleMobMenu
+              isBurger
                 ? "navbar-inner__nav-mob active"
                 : "navbar-inner__nav-mob"
             }
-            onClick={() => setToggleMobMenu(false)}
+            onClick={handleClick}
           >
             {/* TABLETS / MOBILE */}
             <NavbarLinks links={data.links} />
             {/* links */}
           </nav>
 
-          <Hamburger updateHam={handleHam} isBurger={toggleMobMenu} />
+          <Hamburger />
         </div>
       </div>
     </header>

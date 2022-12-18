@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar } from "./components"
+import { ModalWindow, Navbar } from "./components"
 import { AboutSection, ContactsSection, DesignsSection, JourneySection, WorksSection } from './sections'
 
 import { data } from './assets/data/dataEN'
@@ -14,6 +14,8 @@ function App() {
       <DesignsSection data={data.designs} />
       <WorksSection data={data.works} />
       <ContactsSection data={data.contacts} />
+
+      <ModalWindow />
     </div>
   )
 }

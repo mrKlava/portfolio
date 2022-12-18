@@ -1,6 +1,8 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import { SvgTerminalClose, SvgTerminalMinimize } from "../../assets/svg";
+import { handleModal } from "../../store/reducers/ActionCreators";
 import "./card.scss";
 
 function Card({
@@ -30,20 +32,25 @@ function Card({
 export default Card;
 
 function CardTerminal({ obj }) {
-  const [isVisible, setIsVisible] = useState(false)
+  const [blinking, setBlinking] = useState(false)
+  
+  const dispatch = useDispatch()
+  const closeGui = () => dispatch(handleModal())
+
+
 
   useEffect( () => {
-      const blinking = () => setIsVisible(!isVisible)
+      const blinking = () => setBlinking(!blinking)
       const interval = setInterval( blinking, 600)
     return( () => {
       clearInterval(interval)
     })
-  }, [isVisible])
+  }, [blinking])
 
   return (
     <div className="card-terminal">
       <div className="card-terminal_controls">
-        <SvgTerminalClose className="terminal-btn --close" />
+        <SvgTerminalClose onClick={closeGui} className="terminal-btn --close" />
         <SvgTerminalMinimize className="terminal-btn --minimize" />
       </div>
       <div className="card-terminal_title">
@@ -60,7 +67,7 @@ function CardTerminal({ obj }) {
       )}
       <div className="card-terminal_text">{obj.terText}</div>
       <div className="card-terminal_end">
-        <span className="terminal-line">root@user-kali:</span> ~$ <span className={isVisible ? 'visible' : 'visible-not'}>|</span>
+        <span className="terminal-line">root@user-kali:</span> ~$ <span className={blinking ? 'visible' : 'visible-not'}>|</span>
       </div>
     </div>
   );
