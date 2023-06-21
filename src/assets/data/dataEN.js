@@ -1,4 +1,4 @@
-import { imgAbout, imgFelicaPhoto, imgGoodBoy, imgJetbrains, imgMotivator, imgMrCoffee, imgPortfolio } from "../images";
+import { imgAbout, imgFelicaPhoto, imgGoodBoy, imgJetbrains, imgMotivator, imgMrCoffee, imgPortfolio, imgSpeedVelo } from "../images";
 import { SvgEmail, SvgGithub, SvgLinkedin, SvgPhone } from "../svg";
 
 export const data = {
@@ -26,11 +26,19 @@ export const data = {
         "title": "my it journey",
         "cards": [
             {
+                "title": "Omega 365 France",
+                "subtitle": "Web Developer - Work",
+                "description":
+                    "Work with SQL Server and usage of TSQL and usage of companies own framework for creating web based applications",
+                "infobar": ["2023-2024", "Certificate", "Web development"],
+                "link": "https://omega365.com/",
+            },
+            {
                 "title": "la fabrique du numerique paloise",
                 "subtitle": "Web Developer Integrator - Studying",
                 "description":
                     "Studying an Alternance program for Web Developer Integrator. Learning design principles, frontend and backend development. Learning to use CMS systems as WordPress.",
-                "infobar": ["2022-2024", "Diploma bac +2", "Web development"],
+                "infobar": ["2022-2024", "Diploma Bac+2", "Web development"],
                 "link": "https://fabriquenumerique.fr/centre-de-formation/integrateur-developpeur-web/",
             },
             {
@@ -97,6 +105,13 @@ export const data = {
                 "link": "https://www.figma.com/file/T2t3qdCNVyE1YauWNSuCUl/Project-%22GOOD-BOY%22?node-id=2%3A2",
             },
             {
+                "img": imgSpeedVelo,
+                "title": "Speed-Velo",
+                "description":
+                    "This design was created for ecommerce project - premium road bike store. And developed on WordPress",
+                "link": "https://www.figma.com/file/UzqEeHjv54T00gJf8mP2Yg/Speed-Bike?type=design&node-id=0%3A1&t=jNcIsQFaCcUZb5uR-1",
+            },
+            {
                 "img": imgFelicaPhoto,
                 "title": "Felica Photographe",
                 "description":
@@ -108,7 +123,7 @@ export const data = {
                 "title": "Mr Coffee",
                 "description":
                     "This is one of many designs created during studying at \"La fabrique du numérique\" as one of the projects.",
-                "link": "https://www.figma.com/file/ZxgKthPoY6TpFJsEPiuVSV/mr-coffee?node-id=1%3A3",
+                "link": "https://www.figma.com/file/ZxgKthPoY6TpFJsEPiuVSV/mr-coffee?type=design&node-id=0%3A1&t=bu46g3WZRzZu5yfB-1",
             },
             {
                 "img": imgMotivator,
@@ -134,12 +149,22 @@ export const data = {
         },
         "cards": [
             {
+                "title": "EventStar",
+                "subtitle": "Web application",
+                "description":
+                    "This application allows to manage events. Application is role based: User - he can register on event on different locations, Organizator - he can create and manage created events by him, Admin - can manage all users, events, locations and etc",
+                "info": ["PHP", "Bootstrap", "MySQL", "JavaScript", "jQuery"],
+                "link": "https://github.com/mrKlava/MoGo",
+                "code": "https://github.com/mrKlava/MoGo"
+            },
+            {
                 "title": "My Portfolio",
                 "subtitle": "Single Page Application",
                 "description":
                     "This portfolio is created on React. This SPA is still under construction. Soon coming: State handling is managed by Redux-toolkit. Multi language thanks to i18n.",
                 "info": ["HTML", "SCSS", "React", "Redux-toolkit", "i18n"],
-                "link": "https://github.com/mrKlava/MoGo"
+                "link": "https://github.com/mrKlava/MoGo",
+                "code": "https://github.com/mrKlava/MoGo"
             },
             {
                 "title": "Mongo",
@@ -147,7 +172,8 @@ export const data = {
                 "description":
                     "This web page was created for practice purposes with help of YouTube channel BrainsCloud. This project is a fully responsive web page using Media Query Breakpoints in CSS and as well using jQuery to add interactivity for mobile navigation, accordion description dropout. For reviews sections used Slick carousel.",
                 "info": ["HTML", "CSS", "JavaScript", "jQuery"],
-                "link": "https://github.com/mrKlava/MoGo"
+                "link": "https://github.com/mrKlava/MoGo",
+                "code": "https://github.com/mrKlava/MoGo"
             },
             {
                 "title": "Outdoor",
@@ -155,7 +181,8 @@ export const data = {
                 "description":
                     "This is a replica of one of the WordPress themes created as one of the projects during studying at \"La fabrique du numérique\". This project is a fully responsive multi page web page using Media Query Breakpoints in SCSS and as well using JavaScript to add interactivity for mobile navigation and configuration of Swiper slider.",
                 "info": ["HTML", "Sass", "JavaScript"],
-                "link": "#"
+                "link": "https://github.com/IDW-2022-P1/outdoor-adventure-exercice-mrKlava",
+                "code": "https://github.com/IDW-2022-P1/outdoor-adventure-exercice-mrKlava"
             },
             {
                 "title": "Felica Photographe",
@@ -163,7 +190,8 @@ export const data = {
                 "description":
                     "This page was created for a photographer initially on pure HTML and LESS and afterwards remastered as a multi language Single Page Application on React using Sass. This page was created to promote services.",
                 "info": ["HTML", "Sass", "JavaScript", "React", "i18n"],
-                "link": "https://github.com/mrKlava/felica-zoom-photo"
+                "link": "https://github.com/mrKlava/felica-zoom-photo",
+                "code": "https://github.com/mrKlava/felica-zoom-photo"
             },
             {
                 "title": "ActiveBox",
@@ -171,7 +199,8 @@ export const data = {
                 "description":
                     "This web page was created for practice purposes with help of YouTube channel BrainsCloud. This project is a fully responsive website using Media Query Breakpoints in CSS and as well using jQuery to add interactivity for mobile navigation, accordion description dropout. For reviews sections used Slick carousel.",
                 "info": ["HTML", "CSS", "JavaScript", "jQuery"],
-                "link": "https://github.com/mrKlava/activeBox"
+                "link": "https://github.com/mrKlava/activeBox",
+                "code": "https://github.com/mrKlava/activeBox"
             },
             {
                 "title": "Jetbrains Project",
@@ -179,7 +208,8 @@ export const data = {
                 "description":
                     "This is the project \"Portfolio\" which includes five other projects from this course. During this course all projects were made on pure HTML, CSS and JS, but here they are remastered on React. ",
                 "info": ["HTML", "CSS", "JavaScript", "React"],
-                "link": "https://github.com/mrKlava/jetbrains-course"
+                "link": "https://github.com/mrKlava/jetbrains-course",
+                "code": "https://github.com/mrKlava/jetbrains-course"
             },
             {
                 "title": "Motivator",
@@ -187,7 +217,8 @@ export const data = {
                 "description":
                     "Pet project on React. Multi page motivation platform with motivating stories. Still under construction due to complexity. Using Redux-toolkit to manage states, MongoDB Realm for authentication and storing data. Will be multi language with help of i18n.",
                 "info": ["HTML", "Sass", "JavaScript", "React", "i18n", "Redux", "React Router", "MongoDB"],
-                "link": "https://github.com/mrKlava/motivator_react"
+                "link": "https://github.com/mrKlava/motivator_react",
+                "code": "https://github.com/mrKlava/motivator_react"
             },
             {
                 "title": "Hangman",
@@ -195,7 +226,8 @@ export const data = {
                 "description":
                     "Hangman is my early project implementing a classic game - Hangman. It was created using three basic languages of Internet: HTML, CSS and Javascript",
                 "info": ["HTML", "CSS", "JavaScript"],
-                "link": "https://github.com/mrKlava/Hangman"
+                "link": "https://github.com/mrKlava/Hangman",
+                "code": "https://github.com/mrKlava/Hangman"
             },
         ],
     },
