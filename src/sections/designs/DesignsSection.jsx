@@ -43,7 +43,7 @@ function DesignsCard({ className, item }) {
   return (
     <div className={className}>
       <div className="section-container">
-        <div className="image-container">
+        <div className="image-container scrollable">
           <div className="overlay"></div>
           <img src={item.img} alt="" />
         </div>

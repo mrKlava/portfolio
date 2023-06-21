@@ -65,19 +65,5 @@
         &_subtitle {
             color: $blue-base;
         }
-
-        .terminal-line {
-            color: $pink-base;
-        }
     }
-}
-
-span.cursor {
-    animation: blinker .725s infinite;
-}
-
-@keyframes blinker {
-  50% {
-    opacity: 0;
-  }
 }

@@ -1,8 +1,13 @@
 import React from 'react'
+import Title from '../../ui/title/Title'
 
 function NotFoundPage() {
   return (
-    <h1>NOT FOUND</h1>
+    <main>
+      <Title text={'404'}/>
+      <Title text={'Not Found'}/>
+
+    </main>
   )
 }
 

@@ -7,7 +7,7 @@ import { data } from '../../assets/data/dataEN'
 function MainPage() {
 
   return (
-    <div className="App">
+    <main className="App">
       <Navbar data={data.navbar} />
       <AboutSection data={data.about} />
       <JourneySection data={data.journey} />
@@ -16,7 +16,7 @@ function MainPage() {
       <ContactsSection data={data.contacts} />
 
       <ModalWindow />
-    </div>
+    </main>
   )
 }
 
