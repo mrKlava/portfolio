@@ -1,5 +1,4 @@
 import React from "react";
-import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { SvgTerminalClose, SvgTerminalMinimize } from "../../assets/svg";
 import { handleModal } from "../../store/reducers/ActionCreators";
@@ -32,20 +31,9 @@ function Card({
 export default Card;
 
 function CardTerminal({ obj }) {
-  const [blinking, setBlinking] = useState(false)
   
   const dispatch = useDispatch()
   const closeGui = () => dispatch(handleModal())
-
-
-
-  useEffect( () => {
-      const blinking = () => setBlinking(!blinking)
-      const interval = setInterval( blinking, 600)
-    return( () => {
-      clearInterval(interval)
-    })
-  }, [blinking])
 
   return (
     <div className="card-terminal">
@@ -67,7 +55,7 @@ function CardTerminal({ obj }) {
       )}
       <div className="card-terminal_text">{obj.terText}</div>
       <div className="card-terminal_end">
-        <span className="terminal-line">root@user-kali:</span> ~$ <span className={blinking ? 'visible' : 'visible-not'}>|</span>
+        <span className="terminal-line">root@user-kali:</span> ~$ <span className='cursor'>|</span>
       </div>
     </div>
   );
