@@ -1,21 +1,11 @@
 import React from 'react'
-import { ModalWindow, Navbar } from "./components"
-import { AboutSection, ContactsSection, DesignsSection, JourneySection, WorksSection } from './sections'
-
-import { data } from './assets/data/dataEN'
+import MainPage from './pages/main/MainPage'
 
 function App() {
 
   return (
     <div className="App">
-      <Navbar data={data.navbar} />
-      <AboutSection data={data.about} />
-      <JourneySection data={data.journey} />
-      <DesignsSection data={data.designs} />
-      <WorksSection data={data.works} />
-      <ContactsSection data={data.contacts} />
-
-      <ModalWindow />
+      <MainPage />
     </div>
   )
 }

@@ -22,7 +22,7 @@ function ModalWindow() {
             <div className='modal-inner_prompt'>Do you want to close GUI?</div>
             <div className='modal-inner_action'>
                 <Button onClick={handleConfirm}>Yes</Button>
-                <Button onClick={handleCancel}>Cancel</Button>
+                <Button onClick={handleCancel} type='secondary'>Cancel</Button>
             </div>
         </div>
     </div>

@@ -20,12 +20,21 @@
     &-inner {
         background-color:   $noir;
         margin: auto;
-        padding: 1.3rem;
+        // width: 90%;
+        padding: 2rem;
+
         border: 1px solid #888;
-        width: 90%;
 
         &_prompt {
             margin-bottom: 2rem;
+        }
+
+        &_action {
+            display: flex;
+
+            &>a:first-child {
+                margin-right: 1rem;
+            }
         }
     }
 }

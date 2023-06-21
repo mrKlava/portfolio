@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { SvgTerminalClose, SvgTerminalMinimize } from "../../assets/svg";
 import { handleModal } from "../../store/reducers/ActionCreators";
@@ -31,31 +31,36 @@ function Card({
 export default Card;
 
 function CardTerminal({ obj }) {
-  
+
+  const [isMin, setIsMin] = useState(false)
+
   const dispatch = useDispatch()
   const closeGui = () => dispatch(handleModal())
+  const minimizeCli = (e) => setIsMin(!isMin) 
 
   return (
     <div className="card-terminal">
       <div className="card-terminal_controls">
         <SvgTerminalClose onClick={closeGui} className="terminal-btn --close" />
-        <SvgTerminalMinimize className="terminal-btn --minimize" />
+        <SvgTerminalMinimize onClick={minimizeCli} className="terminal-btn --minimize" />
       </div>
-      <div className="card-terminal_title">
-        <span className="terminal-line">root@user-kali:</span> ~$ {obj.terTitle}
-      </div>
-      <div className="card-terminal_subtitle">
-        {obj.terSubtitle} <br /> ...
-      </div>
-      {obj.terTitleSec && (
+      <div className={isMin ? "card-terminal_content --minimize" : "card-terminal_content"}>
         <div className="card-terminal_title">
-          <span className="terminal-line">root@user-kali:</span> ~${" "}
-          {obj.terTitleSec}
+          <span className="terminal-line">root@user-kali:</span> ~$ {obj.terTitle}
         </div>
-      )}
-      <div className="card-terminal_text">{obj.terText}</div>
-      <div className="card-terminal_end">
-        <span className="terminal-line">root@user-kali:</span> ~$ <span className='cursor'>|</span>
+        <div className="card-terminal_subtitle">
+          {obj.terSubtitle} <br /> ...
+        </div>
+        {obj.terTitleSec && (
+          <div className="card-terminal_title">
+            <span className="terminal-line">root@user-kali:</span> ~${" "}
+            {obj.terTitleSec}
+          </div>
+        )}
+        <div className="card-terminal_text">{obj.terText}</div>
+        <div className="card-terminal_end">
+          <span className="terminal-line">root@user-kali:</span> ~$ <span className='cursor'>|</span>
+        </div>
       </div>
     </div>
   );
