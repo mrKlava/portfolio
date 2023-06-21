@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 
 import './index.scss';
 
-import App from './App';
+import Router from './Router';
 
 import { Provider } from 'react-redux'
 import { setupStore } from './store/store'
@@ -14,7 +14,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <Router />
     </Provider>
   </React.StrictMode>
 );
