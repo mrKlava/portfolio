@@ -3,6 +3,8 @@
 
 .cli {
     font-family: $font-text-bash;
+    line-height: 1.5rem;
+
     display: flex; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -23,6 +25,8 @@
         
         margin: auto;
         padding: 2rem;
+
+        padding-bottom: 6rem;
         
         // border: 1px solid #888;
     }
