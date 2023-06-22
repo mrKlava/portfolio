@@ -3,9 +3,22 @@ import {useEffect, useState, useRef} from 'react'
 import './cli-page.scss'
 
 function CliPage() {
+  const bash = {
+    history: ['testsdfsd'],
+    commands: {
+      "help": "bla bla bla bla bla bla",
+      "whoami": "u are one curious user",
+      "invalid": "Invalid command",
+      "exit": "Good Bye",
+      "clear": ''
+    }
+  }
+
   const [output, setOutput] = useState([])
   const [input, setInput] = useState('')
   const [isLoading, setIsLoading] = useState(true)
+  const [index, setIndex] = useState(0)
+  const [history, setHistory] = useState([])
 
   const inputRef = useRef(null);
 
@@ -146,37 +159,37 @@ function CliPage() {
   "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam facere doloremque ut saepe animi, accusamus perspiciatis, vel earum eaque, autem delectus vitae? Incidunt sapiente at, dolore commodi consequatur vel voluptates minima consectetur dolorem quo similique unde provident ad, autem dolores eveniet inventore natus recusandae harum neque laboriosam! Aut vitae fugit voluptate quo illo labore aliquam, laboriosam dignissimos voluptatem in? Asperiores minus ducimus consequuntur vero reprehenderit veritatis id nesciunt similique facilis debitis iste expedita quos iure rerum consectetur modi tempora praesentium, porro dolor rem excepturi facere maxime distinctio nostrum! Odit delectus quasi a nostrum voluptatum asperiores animi reiciendis vero vitae eligendi."<br/>
   "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam facere doloremque ut saepe animi, accusamus perspiciatis, vel earum eaque, autem delectus vitae? Incidunt sapiente at, dolore commodi consequatur vel voluptates minima consectetur dolorem quo similique unde provident ad, autem dolores eveniet inventore natus recusandae harum neque laboriosam! Aut vitae fugit voluptate quo illo labore aliquam, laboriosam dignissimos voluptatem in? Asperiores minus ducimus consequuntur vero reprehenderit veritatis id nesciunt similique facilis debitis iste expedita quos iure rerum consectetur modi tempora praesentium, porro dolor rem excepturi facere maxime distinctio nostrum! Odit delectus quasi a nostrum voluptatum asperiores animi reiciendis vero vitae eligendi."<br/>
   "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam facere doloremque ut saepe animi, accusamus perspiciatis, vel earum eaque, autem delectus vitae? Incidunt sapiente at, dolore commodi consequatur vel voluptates minima consectetur dolorem quo similique unde provident ad, autem dolores eveniet inventore natus recusandae harum neque laboriosam! Aut vitae fugit voluptate quo illo labore aliquam, laboriosam dignissimos voluptatem in? Asperiores minus ducimus consequuntur vero reprehenderit veritatis id nesciunt similique facilis debitis iste expedita quos iure rerum consectetur modi tempora praesentium, porro dolor rem excepturi facere maxime distinctio nostrum! Odit delectus quasi a nostrum voluptatum asperiores animi reiciendis vero vitae eligendi."<br/>
-</p>
-
-const bash = {
-  history: [],
-  commands: {
-    "help": "bla bla bla bla bla bla",
-    "whoami": "u are one curious user",
-    "invalid": "Invalid command",
-    "exit": "Good Bye",
-    "clear": ''
-  }
-}
+  </p>
 
   const toMain = () => window.location.href = '/'
 
   const handleInput = (e) => setInput(e.target.value)
 
   const handleKeys = (e) => {
+
+    console.log(`index: ${index} length: ${history.length}`)
+    
     if (e.keyCode === 13) {         // handle enter
-
       handleCommands(input)
-  
+      setIndex(history.length)
+      
     } else if (e.keyCode === 38) {  // handle up
-
+      if (index < history.length && history.length > 0) {
+        if (index !== history.length - 1) setIndex(index+1)
+        setInput(history[index])
+      }
     } else if (e.keyCode === 40) {  // handle down
-
+      if (index < history.length && index >= 0) {
+        if (index !== 0) setIndex(index-1)
+        setInput(history[index])
+      }
     }
   }
 
   const handleCommands = (command) => {
     if (command.length === 0) return
+
+    setHistory([...history, command])
     
     if (command === 'clear') {
       setOutput([])
@@ -184,7 +197,7 @@ const bash = {
       return
     }
     
-    bash.history.push(command)
+    // bash.history.push(command)
     
     if (bash.commands[command]) {
       renderOutput(command, bash.commands[command])
@@ -209,8 +222,9 @@ const bash = {
 
   const renderOutput = (command, out) => setOutput([...output, `$ ${command}`, out])
   
-  
   useEffect(() => {
+
+
     setTimeout(() => {setIsLoading(false)}, 900)
   }, [])
 
