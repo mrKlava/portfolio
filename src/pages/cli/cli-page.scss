@@ -3,6 +3,11 @@
 
 .cli {
     font-family: $font-text-bash;
+    font-size: $text-xl;
+    input {
+        font-family: $font-text-bash;
+        font-size: $text-xl;
+    }
     line-height: 1.5rem;
 
     display: flex; /* Hidden by default */
