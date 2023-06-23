@@ -4,41 +4,95 @@ import { data } from '../../assets/data/dataEN'
 import './cli-page.scss'
 
 function CliPage() {
-
   const commands = {
-    list: ['help', 'whoami', 'exit', 'clear', 'sudo about -r', 'sudo journey -l'],
+    list: ['ls', 'help', 'whoami', 'exit', 'clear', 'about', 'journey', 'designs', 'projects', 'contacts'],
 
-    help(command) {
-      return "bla bla bla bla bla bla"
+    handleCommand(command) {
+      setHistory([...history, command])
+
+      if (this.list.includes(command)) {
+        if (command !== 'clear') {
+          setOutput([...output, `$ ${command}`, ...this[command](command)])
+        } else {
+          this.clear()
+        }
+      } else {
+        setOutput([...output, `$ ${command}`, ...this.invalid(command)])
+      }
+
+      setInput('')
+
+      inputRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "start"
+      });
     },
-    whoami(command) {
-      return `Hello, I am ${data.about.card.subtitle}, and you are one curious user!`
+
+    ls() {
+      return [
+        '-rw-r--r-- 42 user user 0 march 12 16:22 about.json', 
+        '-rw-r--r-- 42 user user 0 april 23 13:01 journey.json',
+        '-rw-r--r-- 42 user user 0 july 3 08:15 designs.json',
+        '-rw-r--r-- 42 user user 0 december 3 10:02 project.json',
+        '-rw-r--r-- 42 user user 0 march 7 21:37 contacts.json',
+        '---------- 1 root root 0 june 1 00:42 secret'
+      ]
     },
+
+    help() {
+      return ["--- Good day User! ---", "you have following list of commands:", "* ls - list all files", "* help - list all commands", "* whoami - see who am I", "* clear - clear terminal", "* about - get short bio", "* journey - get list of experience", "* designs - get list of designs", "* projects - get list of projects", "* contacts - how you can contact me"]
+    },
+
+    whoami() {
+      return ['-', `Hello, I am ${data.about.card.subtitle},`, 'and you are one curious user!', '-']
+    },
+
     invalid(command) {
-      return "Invalid command"
-    },
-    exit(command) {
-
-    },
-    about(command) {
-
-    },
-    journey(command) {
-
+      return [`Invalid command - ${command}`]
     },
 
-    "help": "bla bla bla bla bla bla",
-    "whoami": `Hello, I am ${data.about.card.subtitle}, and you are one curious user!`,
-    "invalid": "Invalid command",
-    "exit": "Good Bye",
-    "clear": '',
-    "sudo about -r": data.about.card.text,
-    "sudo journey -l": data.journey.cards.map((i) => {
-      return`${i.infobar[0]} - ${i.title} - ${i.subtitle}`
-    })
+    exit() {
+      setTimeout(() => {
+        toMainPage()
+      }, 1500)
 
+      return ['Good Bye!']
+    },
+
+    clear() {
+      setOutput([])
+      setInput('')
+      return []
+    },
+
+    about() {
+      return [data.about.card.text]
+    },
+
+    journey() {
+      return data.journey.cards.map((i) => {
+        return `* ${i.infobar[0]} - ${i.subtitle} - ${i.title}`
+      })
+    },
+    designs() {
+      return data.designs.cards.map((i) => {
+        return `* ${i.title} - ${i.link}`
+      })
+    },
+    projects() {
+      return data.works.cards.map((i) => {
+        return `* ${i.title} - ${i.subtitle} - TECH: ${i.info.join('; ')}`
+      })
+    },
+    contacts() {
+      return data.contacts.info.map((i) => {
+        return `* ${i.name} - ${i.src}`
+      })
+    },
   }
 
+  /* States and Refs */
   const [output, setOutput] = useState(['Welcome to CLI'])
   const [input, setInput] = useState('')
   const [isLoading, setIsLoading] = useState(true)
@@ -47,15 +101,14 @@ function CliPage() {
 
   const inputRef = useRef(null);
 
-  const toMainPage = () => window.location.href = '/'
-
+  /* Event handlers */
   const handleInput = (e) => setInput(e.target.value)
 
   const handleKeys = (e) => {
-
     if (e.keyCode === 13 && input) {  // handle enter
-      handleCommands(input)
       setIndex(history.length)
+
+      commands.handleCommand(input)
 
     } else if (e.keyCode === 38) {  // handle arrow up
       if (index < history.length && history.length > 0) {
@@ -70,38 +123,8 @@ function CliPage() {
     }
   }
 
-  const handleCommands = (command) => {
-    setHistory([...history, command])
-
-    if (command === 'clear') {
-      setOutput([])
-      setInput('')
-      return
-    }
-
-    if (commands[command]) {
-      renderOutput(command, commands[command])
-    } else {
-      renderOutput(command, `${commands['invalid']} ${command}`)
-    }
-
-    setInput('')
-
-    inputRef.current.scrollIntoView({
-      behavior: "smooth",
-      block: "center",
-      inline: "start"
-    });
-
-    if (command === 'exit') {
-      setTimeout(() => {
-        toMainPage()
-      }, 1500)
-    }
-  }
-
-  const renderOutput = (command, out) => setOutput([...output, `$ ${command}`, out])
-
+  /* Helpers */
+  const toMainPage = () => window.location.href = '/'
 
   /* Booting part */
   const loading = <p className='cli-out'>
@@ -249,22 +272,22 @@ function CliPage() {
 
   return (
     <main className="cli">
-      <div className='cli-inner scrollable'>
-        { isLoading ? loading : null }
-        { output.map((item, i) => <p key={i}>{item}</p>) }
+      <div className='cli-inner scrollable bg-glow'>
+        {isLoading ? loading : null}
+        {output.map((item, i) => <p key={i}>{item}</p>)}
         <div className='cli-in'>
           <span className="terminal-line">root@user-kali:</span>
           ~$
           <input className='terminal-in'
-                type="text"       
-                ref={inputRef}  
-                value={input} 
-                onChange={handleInput} 
-                onKeyDown={handleKeys} 
-                autoFocus 
+            type="text"
+            ref={inputRef}
+            value={input}
+            onChange={handleInput}
+            onKeyDown={handleKeys}
+            autoFocus
           />
         </div>
-      </div> 
+      </div>
     </main>
   )
 }

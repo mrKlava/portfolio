@@ -238,10 +238,10 @@ export const data = {
             "subtitle": "Feel free to contact me if you have any questions or proposals",
         },
         "info": [
-            { svg: <SvgLinkedin />, type: "link", link: "https://www.linkedin.com/in/artursklava/" },
-            { svg: <SvgGithub />, type: "link", link: "https://github.com/mrKlava" },
-            { svg: <SvgEmail />, type: "email", link: "mailto:mr.a.klava@gmail.com?subject=Portfolio Page" },
-            { svg: <SvgPhone />, type: "number", link: "tel:WillBeUpdated" },
+            { name: 'LinkedIn', src: 'https://www.linkedin.com/in/artursklava/', svg: <SvgLinkedin />, type: "link", link: "https://www.linkedin.com/in/artursklava/" },
+            { name: 'GitHub', src: 'https://github.com/mrKlava', svg: <SvgGithub />, type: "link", link: "https://github.com/mrKlava" },
+            { name: 'Email', src: 'mr.a.klava@gmail.com', svg: <SvgEmail />, type: "email", link: "mailto:mr.a.klava@gmail.com?subject=Portfolio Page" },
+            { name: 'Number', src: '+33782974495', svg: <SvgPhone />, type: "number", link: "tel:WillBeUpdated" },
         ]
     }
 }
