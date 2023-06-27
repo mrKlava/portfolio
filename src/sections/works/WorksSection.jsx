@@ -49,7 +49,10 @@ function WorksCard({ className, item }) {
         ...
       </div>
       <StackBar className="works-card_info" list={item.info} />
-      <Button link={item.link}>open</Button>
+      <div className="btn-group">
+        <Button link={item.code}>GitHub</Button>
+        {item.link ? <Button type={'secondary'} link={item.link}>Preview</Button> : null}
+      </div>
     </Card>
   );
 }
