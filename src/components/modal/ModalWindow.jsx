@@ -5,6 +5,7 @@ import { Button } from '../../ui'
 
 import './modal-window.scss'
 
+
 function ModalWindow() {
     const isModal = useSelector(state => state.modalReducer.isActive)
     console.log(isModal)
