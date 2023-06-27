@@ -42,7 +42,7 @@ function CliPage() {
     },
 
     help() {
-      return ["--- Good day User! ---", "you have following list of commands:", "* ls - list all files", "* help - list all commands", "* whoami - see who am I", "* clear - clear terminal", "* about - get short bio", "* journey - get list of experience", "* designs - get list of designs", "* projects - get list of projects", "* contacts - how you can contact me"]
+      return ["--- Good day User! ---", "you have following list of commands:", "* ls - list all files", "* help - list all commands", "* whoami - see who am I", "* clear - clear terminal", "* about - get short bio", "* journey - get list of experience", "* designs - get list of designs", "* projects - get list of projects", "* contacts - how you can contact me", "* exit - go back to GUI"]
     },
 
     whoami() {
