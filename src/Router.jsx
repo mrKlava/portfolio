@@ -9,7 +9,7 @@ function Router() {
     <BrowserRouter >
       <Routes basename='/portfolio'>
         <Route path='/portfolio' element={<MainPage />} />
-        <Route path='/cli' element={<CliPage />} />
+        <Route path='/portfolio/cli' element={<CliPage />} />
         <Route path='/*' element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
