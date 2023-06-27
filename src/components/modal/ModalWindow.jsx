@@ -13,7 +13,7 @@ function ModalWindow() {
     const handleCancel = () => dispatch(handleModal())
 
     function handleConfirm() {
-      window.location.href = '/cli'
+      window.location.href = '/portfolio/cli'
     }
 
   return (
