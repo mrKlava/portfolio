@@ -6,11 +6,11 @@ import { CliPage, MainPage, NotFoundPage } from './pages'
 
 function Router() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<MainPage />} />
+    <BrowserRouter >
+      <Routes basename='/portfolio'>
+        <Route path='/portfolio' element={<MainPage />} />
         <Route path='/cli' element={<CliPage />} />
-        <Route path='*' element={<NotFoundPage />} />
+        <Route path='/*' element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
   )

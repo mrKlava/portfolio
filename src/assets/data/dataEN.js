@@ -241,7 +241,7 @@ export const data = {
             { name: 'LinkedIn', src: 'https://www.linkedin.com/in/artursklava/', svg: <SvgLinkedin />, type: "link", link: "https://www.linkedin.com/in/artursklava/" },
             { name: 'GitHub', src: 'https://github.com/mrKlava', svg: <SvgGithub />, type: "link", link: "https://github.com/mrKlava" },
             { name: 'Email', src: 'mr.a.klava@gmail.com', svg: <SvgEmail />, type: "email", link: "mailto:mr.a.klava@gmail.com?subject=Portfolio Page" },
-            { name: 'Number', src: '+33782974495', svg: <SvgPhone />, type: "number", link: "tel:WillBeUpdated" },
+            { name: 'Number', src: '+33782974495', svg: <SvgPhone />, type: "number", link: "tel:+33782974495" },
         ]
     }
 }

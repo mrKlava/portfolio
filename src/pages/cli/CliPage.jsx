@@ -124,7 +124,7 @@ function CliPage() {
   }
 
   /* Helpers */
-  const toMainPage = () => window.location.href = '/'
+  const toMainPage = () => window.location.href = '/portfolio'
 
   /* Booting part */
 
