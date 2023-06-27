@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { CliPage, MainPage, NotFoundPage } from './pages'
 
 
-
 function Router() {
   return (
     <BrowserRouter >
