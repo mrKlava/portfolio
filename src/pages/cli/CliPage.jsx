@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { data } from '../../assets/data/dataEN'
 
 import './cli-page.scss'
@@ -101,6 +102,8 @@ function CliPage() {
 
   const inputRef = useRef(null);
 
+  const navigate = useNavigate()
+
   /* Event handlers */
   const handleInput = (e) => setInput(e.target.value)
 
@@ -124,7 +127,7 @@ function CliPage() {
   }
 
   /* Helpers */
-  const toMainPage = () => window.location.href = '/portfolio'
+  const toMainPage = () => navigate('/portfolio')
 
   /* Booting part */
 
