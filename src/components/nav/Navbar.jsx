@@ -47,7 +47,7 @@ function NavbarLinks(props) {
   return (
     <ul className="navbar-links">
       {props.links.map((link, key) => {
-        return <NavLink link={link} key={key} />;
+        return <NavLink link={link} key={key} />
       })}
     </ul>
   );
