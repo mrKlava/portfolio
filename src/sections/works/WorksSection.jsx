@@ -1,12 +1,13 @@
-import React from "react";
+import React, { forwardRef } from "react"
+
 import { Card, StackBar } from "../../components";
 import { Button, Title } from "../../ui";
 
 import "./works.scss";
 
-function WorksSection({ data }) {
+const WorksSection = forwardRef(function WorksSection({ data }, ref) {
   return (
-    <section id="works" className="works">
+    <section id="works" className="works" ref={ref}>
       <div className="container">
         <div className="section-container">
           <div className="works-header">
@@ -35,23 +36,28 @@ function WorksSection({ data }) {
       </div>
     </section>
   );
-}
+})
 
 export default WorksSection;
+
+
 
 function WorksCard({ className, item }) {
   return (
     <Card className={className}>
-      <Title className="works-card_title" text={item.title} type="card" />
-      <div className="works-card_subtitle">{item.subtitle}</div>
-      <div className="works-card_description">
-        {item.description} <br />
-        ...
+      <div>
+        <Title className="works-card_title" text={item.title} type="card" />
+        <div className="works-card_subtitle">{item.subtitle}</div>
+        <div className="works-card_description">
+          {item.description}
+        </div>
       </div>
-      <StackBar className="works-card_info" list={item.info} />
-      <div className="btn-group">
-        <Button link={item.code}>GitHub</Button>
-        {item.link ? <Button type={'secondary'} link={item.link}>Preview</Button> : null}
+      <div>
+        <StackBar className="works-card_info" list={item.info} />
+        <div className="btn-group">
+          <Button link={item.code}>GitHub</Button>
+          {item.link ? <Button type={'secondary'} link={item.link}>Preview</Button> : null}
+        </div>
       </div>
     </Card>
   );

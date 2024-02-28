@@ -3,6 +3,8 @@
 .journey {
     padding: 4.5rem 0;
 
+    overflow: hidden;
+
     &-content {
         display: flex;
         flex-wrap: wrap;

@@ -1,12 +1,15 @@
-import React from "react";
-import { Card, InfoBar } from "../../components";
-import { Button, Title } from "../../ui";
+import React, { forwardRef } from "react"
+
+import { Card, InfoBar } from "../../components"
+import { Button, Title } from "../../ui"
 
 import "./journey.scss";
 
-function JourneySection({ data }) {
+
+
+const JourneySection = forwardRef(function JourneySection({ data }, ref) {
   return (
-    <section id="journey" className="journey">
+    <section id="journey" className="journey" ref={ref}>
       <div className="container">
         <div className="section-container">
           <Title text={data.title} />
@@ -26,7 +29,7 @@ function JourneySection({ data }) {
       </div>
     </section>
   );
-}
+})
 
 export default JourneySection;
 

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { SvgTerminalClose, SvgTerminalMinimize } from "../../assets/svg";
 import { handleModal } from "../../store/reducers/ActionCreators";
+
 import "./card.scss";
 
 function Card({
