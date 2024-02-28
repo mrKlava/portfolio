@@ -1,9 +1,11 @@
-import React from "react";
+import { useState } from "react";
+import { useTranslation } from 'react-i18next'
 import { useDispatch, useSelector } from "react-redux";
 import { handleBurger } from "../../store/reducers/ActionCreators";
 import { Hamburger } from "../../ui";
 
 import "./navbar.scss";
+import { SvgPlanet } from "../../assets/svg";
 
 function Navbar({ data }) {
   const isBurger = useSelector(state => state.burgerReducer.isActive)
@@ -34,6 +36,7 @@ function Navbar({ data }) {
             {/* links */}
           </nav>
 
+          <LangBar langs={data.langs} />
           <Hamburger />
         </div>
       </div>
@@ -42,6 +45,7 @@ function Navbar({ data }) {
 }
 
 export default Navbar;
+
 
 function NavbarLinks(props) {
   return (
@@ -52,6 +56,7 @@ function NavbarLinks(props) {
     </ul>
   );
 }
+
 
 function NavLink(props) {
   return (
@@ -65,4 +70,41 @@ function NavLink(props) {
       </div>
     </li>
   );
+}
+
+
+function LangBar({ langs }) {
+  const { i18n } = useTranslation()
+  const [isActive, setActive] = useState(false)
+
+  let lng = langs
+  const current = i18n.language;
+
+  console.log(current)
+
+  const handleEnter = () => {
+    setActive(true)
+  }
+  const handleLeve = () => {
+    setActive(false)
+  }
+
+  return (
+    <div className="langbar" onMouseEnter={handleEnter} onMouseLeave={handleLeve}>
+      <div className="langbar-current">
+        <SvgPlanet />
+      </div>
+      <div className={!isActive ? 'langbar-langs' : 'langbar-langs active'}>
+        <ul>
+          {
+            lng.map(function (lng) {
+              return (
+              <li className={current === lng.short ? 'active' : ''} onClick={() => i18n.changeLanguage(lng.short)} key={lng.id}> {lng.short} </li>
+              )
+            })
+          }
+        </ul>
+      </div>
+    </div>
+  )
 }

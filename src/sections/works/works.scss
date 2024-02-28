@@ -7,7 +7,7 @@
         display: flex;
         flex-wrap: wrap-reverse;
 
-        align-items: end;
+        align-items: flex-end;
 
         @media (max-width: $screen-xl) {
             align-items: center;

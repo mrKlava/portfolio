@@ -4,28 +4,28 @@ import { imgAbout, imgFelicaPhoto, imgGoodBoy, imgJetbrains, imgMotivator, imgMr
 export const data = {
     "navbar": {
         "links": [
-            { "text": "About EN", "link": "#about" },
-            { "text": "Journey", "link": "#journey" },
+            { "text": "AboutFR", "link": "#about" },
+            { "text": "JourneyFR", "link": "#journey" },
             { "text": "Designs", "link": "#designs" },
             { "text": "Works", "link": "#works" },
             { "text": "Contact", "link": "#contacts" },
         ],
         "langs": [
-            {
-                "id": 0,
-                "short": 'en',
-                "long": 'English',
-                "active": true,
-            },
-            {
-                "id": 1,
-                "short": 'fr',
-                "long": 'Français'
-            },
-        ]
+          {
+              "id": 0,
+              "short": 'en',
+              "long": 'English',
+              "active": true,
+          },
+          {
+              "id": 1,
+              "short": 'fr',
+              "long": 'Français'
+          },
+      ]
     },
     "about": {
-        "title": 'about me',
+        "title": 'about me fr',
         "img": imgAbout,
         "card": {
             "title": 'whoami',
@@ -254,7 +254,7 @@ export const data = {
             { name: 'LinkedIn', src: 'https://www.linkedin.com/in/artursklava/', type: "link", link: "https://www.linkedin.com/in/artursklava/" },
             { name: 'GitHub', src: 'https://github.com/mrKlava', type: "link", link: "https://github.com/mrKlava" },
             { name: 'Email', src: 'mr.a.klava@gmail.com', type: "email", link: "mailto:mr.a.klava@gmail.com?subject=Portfolio Page" },
-            { name: 'Number', src: '+33782974495', type: "number", link: "tel:+33782974495" }
+            { name: 'Number', src: '+33782974495', type: "number", link: "tel:+33782974495" },
         ]
     }
 }

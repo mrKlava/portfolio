@@ -2,16 +2,20 @@ import { useRef } from 'react'
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+
+import { useTranslation } from 'react-i18next'
+
 import { ModalWindow, Navbar } from "../../components"
 import { AboutSection, ContactsSection, DesignsSection, JourneySection, WorksSection } from '../../sections'
 
-import { data } from '../../assets/data/dataEN'
 
 // init gsap and scroll triger
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 function MainPage() {
-  // create re
+  const { t } = useTranslation();
+
+  // create ref
   const journeyRef = useRef(null)
   const worksRef = useRef(null)
 
@@ -30,9 +34,9 @@ function MainPage() {
           trigger: journeyCard,
           animation: journeyCard,
           start: 'top 80%',
-          end: 'top 40%',
+          end: 'top 60%',
           scrub: true,
-          // markers: true,
+          markers: true,
           toggleActions: "play reverse play reverse",
         },
       });
@@ -49,9 +53,9 @@ function MainPage() {
           trigger: worksCard,
           animation: worksCard,
           start: 'top 80%',
-          end: 'top 40%',
+          end: 'top 60%',
           scrub: true,
-          // markers: true,
+          markers: true,
           toggleActions: "play reverse play reverse",
         },
       });
@@ -61,16 +65,16 @@ function MainPage() {
   }, journeyRef)
 
 
+  console.log(t('data.contacts'))
 
   return (
     <main className="App">
-      <Navbar data={data.navbar} />
-      <AboutSection data={data.about} />
-      <JourneySection data={data.journey} ref={journeyRef} />
-      <DesignsSection data={data.designs} />
-      <WorksSection data={data.works} ref={worksRef} />
-      <ContactsSection data={data.contacts} />
-
+      <Navbar data={ t('data.navbar') } />
+      <AboutSection data={ t('data.about') } />
+      <JourneySection data={ t('data.journey') } ref={journeyRef} />
+      <DesignsSection data={ t('data.designs') } />
+      <WorksSection data={ t('data.works') } ref={worksRef} />
+      <ContactsSection data={ t('data.contacts') } />
       <ModalWindow />
     </main>
   )

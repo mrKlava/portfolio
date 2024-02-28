@@ -24,7 +24,7 @@
         justify-content: center;
 
         @media (max-width: $screen-md) {
-            justify-content: flex-start
+            justify-content: space-between
         }
 
         &__nav {
@@ -165,4 +165,107 @@
             }
         }
     }
+}
+
+.langbar {
+    position: relative;
+
+    color: $clr-navlink;
+    text-transform: uppercase;
+
+    margin-left: 1.5rem;
+
+    @media (max-width: $screen-md) {
+        margin-left: 0;
+    }
+
+    // @media (max-width: $screen-sm-min) {
+    //     // align-self: center;
+    //     margin: 0 2rem;
+    //     padding: 1rem 0;
+    // }
+
+    &-current {
+        font-size: $text-md;
+    
+        @media (max-width: $screen-md-min) {
+            display: none;
+        }
+        
+        svg {
+            display: block;
+            width: $text-sm;
+            height: $text-sm;
+        }
+    }
+
+    &-langs {
+        position: absolute;
+        top: 0;
+
+        background-color: $bg-navbar;
+
+        display: none;
+
+        @media (max-width: $screen-md-min) {
+            position: static;
+            display: block;
+            background-color: transparent;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            display: flex;
+            
+
+            @media (max-width: $screen-sm-min) {
+                display: flex;
+                justify-content: space-around;
+            }
+
+            li {
+                margin-bottom: .5rem;
+
+                padding: 0 .5rem;
+
+
+                transition: color .2s linear;
+
+                &:last-child {
+                    padding-right: 0;
+                }
+
+                &:first-child {
+                    padding-left: 0;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    color: $clr-navlink-hover;
+                }
+
+                &.active {
+                    color: $pink-base;
+                }
+            }
+        }
+
+        &.active {
+            display: block;
+            width: 100%;
+
+            opacity: 0;
+    
+
+            transition: opacity .3s linear;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    } 
+    
 }

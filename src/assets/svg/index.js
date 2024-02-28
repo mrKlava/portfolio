@@ -12,3 +12,6 @@ export { default as SvgPhone } from './SvgPhone'
 export { default as SvgCertificate } from './SvgCertificate'
 export { default as SvgTag } from './SvgTag'
 export { default as SvgClock } from './SvgClock'
+
+/* Other */
+export { default as SvgPlanet } from './SvgPlanet'
