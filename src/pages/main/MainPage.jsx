@@ -23,6 +23,7 @@ function MainPage() {
       tl.from(journeyCard, {
         duration: 3,
         x: 100,
+        scale: .7,
         opacity: 0,
 
         scrollTrigger: {
@@ -41,6 +42,7 @@ function MainPage() {
       tl.from(worksCard, {
         duration: 3,
         y: 100,
+        scale: .5,
         opacity: 0,
 
         scrollTrigger: {
