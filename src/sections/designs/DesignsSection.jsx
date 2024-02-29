@@ -13,11 +13,11 @@ function DesignsSection({ data }) {
     className: "center",
     centerMode: true,
     infinite: true,
-    // autoplay: true,
+    autoplay: true,
     dots: true,
     arrows: false,
 
-    autoplaySpeed: 2000,
+    autoplaySpeed: 2500,
     centerPadding: "60px",
     slidesToShow: 3,
     speed: 500,

@@ -53,8 +53,8 @@ function MainPage() {
         scrollTrigger: {
           trigger: worksCard,
           animation: worksCard,
-          start: 'top 80%',
-          end: 'top 60%',
+          start: 'top 90%',
+          end: 'top 70%',
           scrub: true,
           // markers: true,
           toggleActions: "play reverse play reverse",
