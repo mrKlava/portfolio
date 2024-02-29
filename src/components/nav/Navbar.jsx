@@ -81,17 +81,15 @@ function LangBar({ langs }) {
   let lng = langs
   const current = i18n.language;
 
-  console.log(current)
-
   const handleEnter = () => {
     setActive(true)
   }
-  const handleLeve = () => {
+  const handleLeave = () => {
     setActive(false)
   }
 
   return (
-    <div className="langbar" onMouseEnter={handleEnter} onMouseLeave={handleLeve}>
+    <div className="langbar" onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
       <div className="langbar-current">
         <SvgPlanet />
       </div>

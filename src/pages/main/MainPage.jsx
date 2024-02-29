@@ -37,7 +37,7 @@ function MainPage() {
           start: 'top 80%',
           end: 'top 60%',
           scrub: true,
-          markers: true,
+          // markers: true,
           toggleActions: "play reverse play reverse",
         },
       });
@@ -56,7 +56,7 @@ function MainPage() {
           start: 'top 80%',
           end: 'top 60%',
           scrub: true,
-          markers: true,
+          // markers: true,
           toggleActions: "play reverse play reverse",
         },
       });
@@ -64,9 +64,6 @@ function MainPage() {
 
 
   }, journeyRef)
-
-
-  console.log(t('data.contacts'))
 
   return (
     <main className="App">

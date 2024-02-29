@@ -14,7 +14,7 @@
         border-radius: 10px;
         padding: 2rem;
         background: $bg-body;
-       
+
 
         .btn-group {
             display: flex;
@@ -31,11 +31,11 @@
                 margin-right: 1rem;
 
                 @media (max-width: $screen-sm) {
-                   margin: 0 0 1rem 0;
+                    margin: 0 0 1rem 0;
                 }
             }
         }
-        
+
     }
 
     &-terminal {
@@ -48,13 +48,14 @@
             .terminal-btn {
                 cursor: pointer;
 
-                width: 1rem;
+                width: 1.2rem;
 
                 transition: fill linear .2s;
 
                 &.--close {
                     fill: $pink-base;
                     margin-right: .5rem;
+                    animation: glow 1s infinite alternate 4s;
 
                     &:hover {
                         fill: lighten($pink-base, 20%);
@@ -75,8 +76,8 @@
             max-height: 600px;
             transition: max-height .3s linear;
             overflow: hidden;
-            
-            
+
+
             &.--minimize {
                 max-height: 0;
 
@@ -87,5 +88,15 @@
         &_subtitle {
             color: $blue-base;
         }
+    }
+}
+
+@keyframes glow {
+    from {
+        filter: drop-shadow(0 0 .2rem $blanche) drop-shadow(0 0 1rem $blue-base) drop-shadow(0 0 2rem $pink-base);
+    }
+
+    to {
+        filter: drop-shadow(0 0 0 $pink-base);
     }
 }

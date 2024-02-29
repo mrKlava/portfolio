@@ -41,10 +41,14 @@ p {
 }
 
 .section-container {
-    padding: 1rem 2rem 3rem;
+    padding: 4rem 2rem 5rem;
 
     border-radius: 20px;
     box-shadow: 20px 15px 20px rgba(0, 0, 0, 0.25), -70px 50px 30px rgba(0, 0, 0, 0.25);
+
+    @media (max-width: $screen-md) {
+        padding: 1rem .5rem 3rem;
+    }
 }
 
 a,

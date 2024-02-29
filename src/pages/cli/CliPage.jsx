@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
+
 import { data } from '../../assets/data/dataEN'
 
 import './cli-page.scss'
@@ -95,7 +96,7 @@ function CliPage() {
   }
 
   /* States and Refs */
-  const [output, setOutput] = useState(['Welcome to CLI'])
+  const [output, setOutput] = useState(['Welcome to CLI', 'For help run: help'])
   const [input, setInput] = useState('')
   const [isLoading, setIsLoading] = useState(true)
   const [index, setIndex] = useState(0)

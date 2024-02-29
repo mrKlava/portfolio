@@ -10,7 +10,7 @@ i18n
   .use(initReactI18next)
   .use(LanguageDetector)
   .init({
-    debug: true,
+    // debug: true,
     returnObjects: true,
     detection: {
       order: ['cookie', 'htmlTag', 'localStorage', 'path', 'subdomain'],

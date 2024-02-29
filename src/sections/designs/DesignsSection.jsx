@@ -13,7 +13,7 @@ function DesignsSection({ data }) {
     className: "center",
     centerMode: true,
     infinite: true,
-    autoplay: true,
+    // autoplay: true,
     dots: true,
     arrows: false,
 
