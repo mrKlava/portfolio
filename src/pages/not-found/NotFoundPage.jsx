@@ -6,7 +6,6 @@ function NotFoundPage() {
     <main>
       <Title text={'404'}/>
       <Title text={'Not Found'}/>
-
     </main>
   )
 }

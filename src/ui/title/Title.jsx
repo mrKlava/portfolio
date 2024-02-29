@@ -1,5 +1,5 @@
-import React from "react";
-import "./title.scss";
+import "./title.scss"
+
 
 function Title({ className, text, type = "section" }) {
   return type === "card" ? (
@@ -18,7 +18,7 @@ function Title({ className, text, type = "section" }) {
         <h2 className="title --white">{text}</h2>
       </div>
     </div>
-  );
+  )
 }
 
-export default Title;
+export default Title

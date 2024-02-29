@@ -1,10 +1,9 @@
-import React, { forwardRef } from "react"
+import { forwardRef } from "react"
 
 import { Card, InfoBar } from "../../components"
 import { Button, Title } from "../../ui"
 
-import "./journey.scss";
-
+import "./journey.scss"
 
 
 const JourneySection = forwardRef(function JourneySection({ data }, ref) {
@@ -21,19 +20,21 @@ const JourneySection = forwardRef(function JourneySection({ data }, ref) {
                   key={index}
                   item={item}
                   number={index}
+                  btnText={data.btn_text}
                 />
-              );
+              )
             })}
           </div>
         </div>
       </div>
     </section>
-  );
+  )
 })
 
 export default JourneySection;
 
-function JourneyCard({ className, item, number }) {
+
+function JourneyCard({ className, item, number, btnText = "" }) {
   const isOdd = number % 2 !== 0 ? "odd" : "";
 
   return (
@@ -45,7 +46,7 @@ function JourneyCard({ className, item, number }) {
         ...
       </div>
       <InfoBar className="journey-card_info" list={item.infobar} />
-      <Button link={item.link} type="tertiary">find out more</Button>
+      <Button link={item.link} type="tertiary">{btnText}</Button>
     </Card>
-  );
+  )
 }

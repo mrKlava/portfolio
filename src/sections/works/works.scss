@@ -7,7 +7,7 @@
         display: flex;
         flex-wrap: wrap-reverse;
 
-        align-items: flex-end;
+        align-items: flex-start;
 
         @media (max-width: $screen-xl) {
             align-items: center;
@@ -34,21 +34,16 @@
         gap: 1.5rem;
 
         &_item {
+
+
             flex: 1 0 30%;
-    
-
-            // &:last-child {
-            //     margin-bottom: 0;
-
-            //     justify-self: center;
-            // }
 
             @media (max-width: $screen-xl) {
                 flex: 1 0 45%;
             }
 
             @media (max-width: $screen-md) {
-            flex: 1 0 100%;
+                flex: 1 0 100%;
             }
         }
 
@@ -58,8 +53,14 @@
                 flex-direction: column;
 
                 justify-content: space-between;
-    
+
                 height: 400px;
+                overflow: hidden;
+
+
+                @media (max-width: $screen-md) {
+                    height: 100%;
+                }
             }
         }
     }
@@ -83,10 +84,16 @@
             // hide text overflow
             overflow: hidden;
             display: -webkit-box;
-            -webkit-line-clamp: 5;
             /* number of lines to show */
+            -webkit-line-clamp: 5;
             line-clamp: 5;
             -webkit-box-orient: vertical;
+
+            // temp solution
+            &:hover {
+                line-clamp: 100;
+                -webkit-line-clamp: 100;
+            }
         }
 
         &_info {
@@ -94,78 +101,3 @@
         }
     }
 }
-
-
-
-
-// @use '/src/assets/styles/variables' as *;
-
-// .works {
-//     padding: 4.5em 0;
-
-//     &-header {
-//         display: flex;
-//         flex-wrap: wrap-reverse;
-
-//         margin-bottom: 3rem;
-
-//         &_item {
-//             width: 50%;
-
-//             @media (max-width: $screen-xl) {
-//                 width: 100%;
-
-//                 .card-container {
-//                     display: block;
-//                 }
-//             }
-//         }
-//     }
-
-//     &-content {
-//         display: flex;
-//         flex-wrap: wrap;
-//         justify-content: space-evenly;
-
-//         &_item {
-//             width: 30%;
-//             margin-bottom: 3rem;
-
-//             &:last-child {
-//                 margin-bottom: 0;
-
-//                 justify-self: center;
-//             }
-
-//             @media (max-width: $screen-xl) {
-//                 width: 45%;
-//             }
-
-//             @media (max-width: $screen-md) {
-//                 width: 100%;
-//             }
-//         }
-//     }
-
-//     &-card {
-//         &_title {
-//             // margin-bottom: 1rem;
-//         }
-
-//         &_subtitle {
-//             font-size: $title-xs;
-//             font-weight: 300;
-//             margin-bottom: 1rem;
-//         }
-
-//         &_description {
-//             font-family: $font-text-bash;
-//             color: $clr-text-dark;
-//             margin-bottom: 1rem;
-//         }
-
-//         &_info {
-//             margin-bottom: 2rem;
-//         }
-//     }
-// }

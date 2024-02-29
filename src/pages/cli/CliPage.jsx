@@ -4,6 +4,7 @@ import { data } from '../../assets/data/dataEN'
 
 import './cli-page.scss'
 
+
 function CliPage() {
   const commands = {
     list: ['ls', 'help', 'whoami', 'exit', 'clear', 'about', 'journey', 'designs', 'projects', 'contacts'],

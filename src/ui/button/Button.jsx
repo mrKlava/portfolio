@@ -1,5 +1,5 @@
-import React from "react";
-import "./button.scss";
+import "./button.scss"
+
 
 function Button({ children, type = "primary", onClick, link = false }) {
   return (
@@ -12,7 +12,7 @@ function Button({ children, type = "primary", onClick, link = false }) {
     >
       {children}
     </a>
-  );
+  )
 }
 
 export default Button;

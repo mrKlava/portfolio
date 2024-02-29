@@ -1,9 +1,10 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import { SvgTerminalClose, SvgTerminalMinimize } from "../../assets/svg";
-import { handleModal } from "../../store/reducers/ActionCreators";
+import { useState } from "react"
+import { useDispatch } from "react-redux"
+import { SvgTerminalClose, SvgTerminalMinimize } from "../../assets/svg"
+import { handleModal } from "../../store/reducers/ActionCreators"
 
-import "./card.scss";
+import "./card.scss"
+
 
 function Card({
   children,
@@ -29,7 +30,8 @@ function Card({
   );
 }
 
-export default Card;
+export default Card
+
 
 function CardTerminal({ obj }) {
 
@@ -37,7 +39,7 @@ function CardTerminal({ obj }) {
 
   const dispatch = useDispatch()
   const closeGui = () => dispatch(handleModal())
-  const minimizeCli = (e) => setIsMin(!isMin) 
+  const minimizeCli = (e) => setIsMin(!isMin)
 
   return (
     <div className="card-terminal">
@@ -64,5 +66,5 @@ function CardTerminal({ obj }) {
         </div>
       </div>
     </div>
-  );
+  )
 }

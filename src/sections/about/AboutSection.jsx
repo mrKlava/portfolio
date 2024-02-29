@@ -1,8 +1,8 @@
-import React from "react";
-import { Card } from "../../components";
-import { Title } from "../../ui";
+import { Card } from "../../components"
+import { Title } from "../../ui"
 
-import "./about.scss";
+import "./about.scss"
+
 
 function AboutSection({ data }) {
   return (
@@ -28,7 +28,7 @@ function AboutSection({ data }) {
         </div>
       </div>
     </section>
-  );
+  )
 }
 
-export default AboutSection;
+export default AboutSection

@@ -1,14 +1,12 @@
-import React from "react";
-import Slider from "react-slick";
+import Slider from "react-slick"
 
-import { Card } from "../../components";
-import { Button, Title } from "../../ui";
+import { Card } from "../../components"
+import { Button, Title } from "../../ui"
 
-// import { Slider } from "react-slick"
+import "./designs.scss"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
-import "./designs.scss";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 function DesignsSection({ data }) {
   const settings = {
@@ -43,9 +41,7 @@ function DesignsSection({ data }) {
   return (
     <section id="designs" className="designs">
       <div className="container">
-
         <div className="section-container">
-
           <div className="designs-header">
             <div className="designs-header_item">
               <Card
@@ -59,7 +55,6 @@ function DesignsSection({ data }) {
           </div>
         </div>
       </div>
-
       <div className="designs-content">
         <Slider {...settings}>
           {data.cards.map((item, index) => {
@@ -68,20 +63,20 @@ function DesignsSection({ data }) {
                 key={index}
                 item={item}
                 className={"designs-content_item"}
+                btnText={data.btn_text}
               />
             );
           })}
         </Slider>
       </div>
-
-
     </section>
-  );
+  )
 }
 
 export default DesignsSection;
 
-function DesignsCard({ className, item }) {
+
+function DesignsCard({ className, item, btnText = "click" }) {
   return (
     <div className={className}>
       <Card>
@@ -94,75 +89,9 @@ function DesignsCard({ className, item }) {
         <div className="designs-card_info">
           <Title text={item.title} type="card" />
           <div className="designs-card_description">{item.description}</div>
-          <Button link={item.link} type="tertiary">See design</Button>
+          <Button link={item.link} type="tertiary">{btnText}</Button>
         </div>
       </Card>
     </div>
-  );
+  )
 }
-
-
-
-
-
-
-
-// import React from "react";
-// import { Card } from "../../components";
-// import { Button, Title } from "../../ui";
-
-// import "./designs.scss";
-
-// function DesignsSection({ data }) {
-//   return (
-//     <section id="designs" className="designs">
-//       <div className="container">
-//         <div className="section-container">
-//           <div className="designs-header">
-//             <div className="designs-header_item">
-//               <Card
-//                 terTitle={data.card.title}
-//                 terSubtitle={data.card.subtitle}
-//               />
-//             </div>
-//             <div className="designs-header_item">
-//               <Title text={data.title} />
-//             </div>
-//           </div>
-//           <div className="designs-content">
-//             {data.cards.map((item, index) => {
-//               return (
-//                 <DesignsCard
-//                   key={index}
-//                   item={item}
-//                   className={"designs-content_item"}
-//                 />
-//               );
-//             })}
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
-// export default DesignsSection;
-
-// function DesignsCard({ className, item }) {
-//   return (
-//     <div className={className}>
-//       <div className="section-container">
-//         <div className="image-container scrollable">
-//           <div className="overlay"></div>
-//           <img src={item.img} alt="" />
-//         </div>
-
-//         <div className="designs-card_info">
-//           <Title text={item.title} type="card" />
-//           <div className="designs-card_description">{item.description}</div>
-//           <Button link={item.link}>See design</Button>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }

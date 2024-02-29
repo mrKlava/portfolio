@@ -1,13 +1,12 @@
-import React from "react";
-
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux"
 import { handleBurger } from '../../store/reducers/ActionCreators'
 
-import "./hamburger.scss";
+import "./hamburger.scss"
+
 
 function Hamburger() {
   const isBurger = useSelector(state => state.burgerReducer.isActive)
-  
+
   const dispatch = useDispatch()
   const handleClick = () => dispatch(handleBurger())
 
@@ -21,7 +20,7 @@ function Hamburger() {
       <span></span>
       <span></span>
     </div>
-  );
+  )
 }
 
-export default Hamburger;
+export default Hamburger

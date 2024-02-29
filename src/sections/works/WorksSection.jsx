@@ -1,9 +1,10 @@
-import React, { forwardRef } from "react"
+import { forwardRef } from "react"
 
-import { Card, StackBar } from "../../components";
-import { Button, Title } from "../../ui";
+import { Card, StackBar } from "../../components"
+import { Button, Title } from "../../ui"
 
-import "./works.scss";
+import "./works.scss"
+
 
 const WorksSection = forwardRef(function WorksSection({ data }, ref) {
   return (
@@ -28,21 +29,21 @@ const WorksSection = forwardRef(function WorksSection({ data }, ref) {
                   key={index}
                   item={item}
                   className={"works-content_item"}
+                  btnText={data.btn_text}
                 />
-              );
+              )
             })}
           </div>
         </div>
       </div>
     </section>
-  );
+  )
 })
 
-export default WorksSection;
+export default WorksSection
 
 
-
-function WorksCard({ className, item }) {
+function WorksCard({ className, item, btnText = "click" }) {
   return (
     <Card className={className}>
       <div>
@@ -52,13 +53,13 @@ function WorksCard({ className, item }) {
           {item.description}
         </div>
       </div>
-      <div>
+      <div className="works-info">
         <StackBar className="works-card_info" list={item.info} />
         <div className="btn-group">
           <Button link={item.code}>GitHub</Button>
-          {item.link ? <Button type={'secondary'} link={item.link}>Preview</Button> : null}
+          {item.link ? <Button type={'secondary'} link={item.link}>{btnText}</Button> : null}
         </div>
       </div>
     </Card>
-  );
+  )
 }

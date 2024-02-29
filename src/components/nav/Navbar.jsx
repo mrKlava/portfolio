@@ -1,11 +1,12 @@
-import { useState } from "react";
+import { useState } from "react"
 import { useTranslation } from 'react-i18next'
-import { useDispatch, useSelector } from "react-redux";
-import { handleBurger } from "../../store/reducers/ActionCreators";
-import { Hamburger } from "../../ui";
+import { useDispatch, useSelector } from "react-redux"
+import { handleBurger } from "../../store/reducers/ActionCreators"
+import { Hamburger } from "../../ui"
+import { SvgPlanet } from "../../assets/svg"
 
-import "./navbar.scss";
-import { SvgPlanet } from "../../assets/svg";
+import "./navbar.scss"
+
 
 function Navbar({ data }) {
   const isBurger = useSelector(state => state.burgerReducer.isActive)
@@ -41,7 +42,7 @@ function Navbar({ data }) {
         </div>
       </div>
     </header>
-  );
+  )
 }
 
 export default Navbar;
@@ -54,7 +55,7 @@ function NavbarLinks(props) {
         return <NavLink link={link} key={key} />
       })}
     </ul>
-  );
+  )
 }
 
 
@@ -69,7 +70,7 @@ function NavLink(props) {
         </a>
       </div>
     </li>
-  );
+  )
 }
 
 
@@ -99,7 +100,7 @@ function LangBar({ langs }) {
           {
             lng.map(function (lng) {
               return (
-              <li className={current === lng.short ? 'active' : ''} onClick={() => i18n.changeLanguage(lng.short)} key={lng.id}> {lng.short} </li>
+                <li className={current === lng.short ? 'active' : ''} onClick={() => i18n.changeLanguage(lng.short)} key={lng.id}> {lng.short} </li>
               )
             })
           }
