@@ -40,6 +40,22 @@ export const data = {
         "btn_text": "savoir plus",
         "cards": [
             {
+                "title": "Lipstip",
+                "subtitle": "Développeur Web Fullstack - Travail",
+                "description":
+                    "En tant que développeur web Full-Stack chez Lipstip, je suis responsable de la direction de l'équipe de développement et de la supervision de l'ensemble du cycle de vie du développement logiciel, de la conception au déploiement. J'ai mis en œuvre des applications web évolutives, en utilisant une stack technologique variée incluant Docker, React, Node.js, OVH Cloud, etc. Mes responsabilités comprenaient également le développement pratique, la réalisation de revues de code, et la planification du développement. De plus, j'ai encadré des développeurs juniors, en favorisant un environnement de travail collaboratif et innovant qui priorise l'amélioration continue et l'apprentissage.",
+                "infobar": ["2024-EN COURS", "References", "Développement web"],
+                "link": "https://www.linkedin.com/company/lipstip/",
+            },
+            {
+                "title": "la fabrique du numerique",
+                "subtitle": "Concepteur Développeur d’Applications - Studies",
+                "description":
+                    "Au cours de mes études dans le programme de développement d'applications, j'ai acquis des connaissances approfondies et une expérience pratique dans la conception, le développement et la maintenance d'applications logicielles. J'ai appris à travailler avec différents langages de programmation, ainsi qu'à maîtriser le cycle de vie du développement logiciel, y compris l'analyse des besoins, la conception du système, le codage, les tests et le déploiement. De plus, j'ai affiné mes compétences en résolution de problèmes, appris à travailler efficacement en équipe et me suis familiarisé avec différentes méthodologies de développement.",
+                "infobar": ["2024-2025", "Diplôme Bac+3", "Développement d'applications"],
+                "link": "https://fabriquenumerique.fr/",
+            },
+            {
                 "title": "Omega 365 France",
                 "subtitle": "Développeur de logiciels web - Travail",
                 "description":

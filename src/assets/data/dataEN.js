@@ -40,6 +40,22 @@ export const data = {
         "btn_text": "find out more",
         "cards": [
             {
+                "title": "Lipstip",
+                "subtitle": "Fullstack Web Developer - Work",
+                "description":
+                    "As Full-Stack Web Developer at Lipstip, I am responsible for leading the development team and overseeing the entire software development lifecycle, from concept to deployment. Implementing scalable web applications, utilizing a diverse tech stack that included Docker, React, Node.js OVH Cloud etc. My responsibilities included hands-on coding, making code reviews, planning development. Additionally, I mentored junior developers, fostering a collaborative and innovative work environment that prioritized continuous improvement and learning.",
+                "infobar": ["2024-ON GOING", "References", "Web development"],
+                "link": "https://www.linkedin.com/company/lipstip/",
+            },
+            {
+                "title": "la fabrique du numerique",
+                "subtitle": "Application Developer - Studies",
+                "description":
+                    "During my studies in the Application Developer program, I gained comprehensive knowledge and hands-on experience in designing, developing, and maintaining software applications. I learned to work with various programming languages. As well software development lifecycle, including requirements analysis, system design, coding, testing, and deployment. Additionally, I honed my problem-solving skills, learned to work effectively in teams, and became familiar with different development methodologies.",
+                "infobar": ["2024-2025", "Diploma EQF Level 6", "Application Development"],
+                "link": "https://fabriquenumerique.fr/",
+            },
+            {
                 "title": "Omega 365 France",
                 "subtitle": "Software Web Developer - Work",
                 "description":
@@ -49,10 +65,10 @@ export const data = {
             },
             {
                 "title": "la fabrique du numerique",
-                "subtitle": "Web Application Developer and Integrator - Studying",
+                "subtitle": "Web Application Developer and Integrator - Studies",
                 "description":
-                    "During my studies, I gained valuable theoretical knowledge and  practical skills across several domains. I learned design principles to create visually appealing websites and honed my abilities in full-stack web development using modern technology stacks (React, Node.js, PHP, Symfony). Additionally, I acquired proficiency in utilizing CMS systems like WordPress for efficient content management. The program also covered project planning, enabling me to effectively manage web development projects. Overall, this program equipped me with a comprehensive skill set necessary for success as a web developer. ",
-                "infobar": ["2022-2024", "Diploma Bac+2", "Web development"],
+                    "During my studies, I gained valuable theoretical knowledge and  practical skills across several domains. I learned design principles to create visually appealing websites and honed my abilities in full-stack web development using modern technology stacks (React, Node.js, PHP, Symfony). Additionally, I acquired proficiency in utilizing CMS systems like WordPress for efficient content management. The program also covered project planning, enabling me to effectively manage web development projects. Overall, this program equipped me with a comprehensive skill set necessary for success as a web developer.",
+                "infobar": ["2022-2024", "Diploma EQF Level 5", "Web development"],
                 "link": "https://fabriquenumerique.fr/",
             },
             {
